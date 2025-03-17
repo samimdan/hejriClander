@@ -1,0 +1,1 @@
+C:\Users\USER\source\repos\sysinfo\sysinfo\sysinfo.csproj;x86
