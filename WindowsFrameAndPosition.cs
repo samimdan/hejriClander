@@ -23,14 +23,16 @@ internal class WindowsFrameAndPosition
         if (!windowPos) throw new Exception("Failed to remove window frame.");
     }
 
-    [LibraryImport(DllReferences.User32)]
+    [DllImport (DllReferences.User32)]
 #pragma warning disable SYSLIB1050
     private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy,
         uint uFlags);
 
     //private static extern bool GetWindowRect(IntPtr hWnd, out RECT lpRect);
     private static extern bool GetCursorPos(out Point lpPoint);
+    [DllImport(DllReferences.User32)]
     private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+    [DllImport(DllReferences.User32)]
     private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 #pragma warning restore SYSLIB1050
 //        [LibraryImport(DllReferences.Dwmapi)]

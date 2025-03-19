@@ -25,6 +25,8 @@ namespace sysinfo
         public MainWindow()
         {
             this.InitializeComponent();
+            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            WindowsFrameAndPosition.NakedWindow(hwnd);
 
             //this.ExtendsContentIntoTitleBar = true;
 
