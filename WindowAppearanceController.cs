@@ -3,6 +3,7 @@
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using Microsoft.UI.Windowing;
 using Windows.Media.Devices.Core;
 
 #endregion
@@ -11,6 +12,12 @@ namespace sysinfo;
 
 internal class WindowAppearanceController
 {
+    [StructLayout(LayoutKind.Sequential)]
+    public struct Point
+    {
+        public int X;
+        public int Y;
+    }
     public static void NakedWindow(IntPtr hWnd)
     {
         var style = GetWindowLong(hWnd, Win32Index.STYLE);
@@ -28,11 +35,15 @@ internal class WindowAppearanceController
         if (result != 0) throw new Exception("Failed to set window corner radius.");
     }
 
-    public static void SetTopMost(IntPtr hWnd, bool pvAttribute)
+    public static void SetTopMost(MainWindow window)
     {
-        var hWndInsertAfter = pvAttribute ? new IntPtr(-1) : new IntPtr(-2);
-        var result = SetWindowPos(hWnd, hWndInsertAfter, 0, 0, 0, 0, WindowPositionFlags.TOPMOST);
-        if (!result) throw new Exception("Failed to set window topmost.");
+        var presenter = window.AppWindow.Presenter as OverlappedPresenter;
+        if (presenter != null) presenter.IsAlwaysOnTop = true;
+    }
+    public static Point GetCursorPosition()
+    {
+        GetCursorPos(out var point);
+        return point;
     }
 
     [DllImport(DllReferences.User32)]
@@ -41,7 +52,11 @@ internal class WindowAppearanceController
 #pragma warning restore SYSLIB1054
         uint uFlags);
 
+    [DllImport(DllReferences.User32)]
+#pragma warning restore SYSLIB1054
+#pragma warning disable SYSLIB1054
     private static extern bool GetCursorPos(out Point lpPoint);
+#pragma warning restore SYSLIB1054
 
     [DllImport(DllReferences.User32)]
 #pragma warning disable SYSLIB1054

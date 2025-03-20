@@ -18,18 +18,20 @@ namespace sysinfo
 
     public sealed partial class MainWindow : Window
     {
-
+        
 
 
         /* ------------------------------- MainWindow Constructor ------------------------------- */
         public MainWindow()
         {
             this.InitializeComponent();
-            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var hwnd = WindowNative.GetWindowHandle(this);
             WindowAppearanceController.NakedWindow(hwnd);
-            WindowAppearanceController.SetCornerRadius(hwnd,WindowCornerPreference.ROUND);
-            WindowAppearanceController.SetTopMost(hwnd, true);
-            //this.ExtendsContentIntoTitleBar = true;
+            WindowAppearanceController.SetTopMost(this);
+            WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
+            var  courserPosition = WindowAppearanceController.GetCursorPosition();
+            Debug.WriteLine(courserPosition.X);
+            Debug.WriteLine(courserPosition.Y);
 
         }
 
