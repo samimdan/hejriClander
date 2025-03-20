@@ -39,18 +39,19 @@
     }
 
 
-    internal static class DwmWindowCornerPreference
+    internal static class WindowCornerPreference
     {
         public const int DEFAULT = 0;
         public const int DONOTROUND = 1;
         public const int ROUND = 2;
         public const int ROUNDSMALL = 3;
+        public const int PREFERENCE = 33;
     }
 
     internal static class PvAttribute
     {
-        public const int PVATRUE = 1;
-        public const int PVAFALSE = 0;
+        public const int TRUE = 1;
+        public const int FALSE = 0;
     }
 
     internal static class DwmWindowBackdropType
@@ -97,6 +98,7 @@
         public const int NOZORDER = 0x0004; // Retains current Z order
         public const int SHOWWINDOW = 0x0040; // Shows the window
         public const int NOCHANGE = NOZORDER | NOMOVE | FRAMECHANGED | NOSIZE ;
+        public const int TOPMOST = NOMOVE|NOMOVE|SHOWWINDOW; // Places window at the topmost position
     }
 
     public static class WindowZOrder

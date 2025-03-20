@@ -26,8 +26,9 @@ namespace sysinfo
         {
             this.InitializeComponent();
             var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-            WindowsFrameAndPosition.NakedWindow(hwnd);
-
+            WindowAppearanceController.NakedWindow(hwnd);
+            WindowAppearanceController.SetCornerRadius(hwnd,WindowCornerPreference.ROUND);
+            WindowAppearanceController.SetTopMost(hwnd, true);
             //this.ExtendsContentIntoTitleBar = true;
 
         }
