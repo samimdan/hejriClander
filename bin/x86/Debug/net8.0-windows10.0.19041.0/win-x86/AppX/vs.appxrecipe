@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-20T13:55:47.048</Modified>
+      <Modified>2025-03-21T06:32:53.745</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-20T13:55:46.469</Modified>
+      <Modified>2025-03-21T06:32:53.400</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-20T13:55:46.528</Modified>
+      <Modified>2025-03-21T06:32:53.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
