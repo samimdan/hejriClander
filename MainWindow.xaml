@@ -3,10 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="Borderless Window"
    >
-    
 
-    <Grid Background="#00000000" >
-        <TextBlock Text="12"  Foreground="Black"  FontSize="16" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin"
+
+    <Grid Background="#00000000" PointerPressed="HandleGridPointerPressed" PointerReleased="HandleGridPointerRelased" >
+        <TextBlock Text="12"  Foreground="Black"   FontSize="16" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin"
                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

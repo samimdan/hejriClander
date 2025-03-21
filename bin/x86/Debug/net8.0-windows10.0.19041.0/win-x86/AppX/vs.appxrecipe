@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-21T06:32:53.745</Modified>
+      <Modified>2025-03-21T21:29:13.955</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-19T18:17:57.010</Modified>
+      <Modified>2025-03-21T19:19:46.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-21T06:32:53.400</Modified>
+      <Modified>2025-03-21T21:29:13.719</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-21T06:32:53.408</Modified>
+      <Modified>2025-03-21T21:29:13.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>

@@ -45,6 +45,10 @@ internal class WindowAppearanceController
       window.AppWindow.Move(new PointInt32 {X=x,Y=y } );
 
     }
+    public static void SetWindowsSize(MainWindow window, int width, int height)
+    {
+        window.AppWindow.Resize(new SizeInt32 { Width = width, Height = height });
+    }
 
     [DllImport(DllReferences.User32)]
 #pragma warning disable SYSLIB1054

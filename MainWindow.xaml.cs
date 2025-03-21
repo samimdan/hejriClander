@@ -1,43 +1,50 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿#region
+
+using System.Diagnostics;
+using System.Drawing;
+using Microsoft.UI.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Windowing;
-using Windows.Graphics;
-using System.Diagnostics;
 using WinRT.Interop;
-using Microsoft.UI.Dispatching;
-using Microsoft.UI.Input;
-using Microsoft.UI.Composition.SystemBackdrops;
-using Microsoft.UI.Xaml.Media;
-using System.Xml.Linq;
-using Microsoft.UI;
-using Microsoft.Foundation;
 
-namespace sysinfo
+#endregion
+
+namespace sysinfo;
+
+public sealed partial class MainWindow : Window
 {
+    private readonly DispatcherTimer _dispatcherTimer = new();
 
-    public sealed partial class MainWindow : Window
+    /* ------------------------------- MainWindow Constructor ------------------------------- */
+    public MainWindow()
     {
-    
-        
+        InitializeComponent();
+        //set the width of the window
+        WindowAppearanceController.SetWindowsSize(this, 300, 1000);
+        var hwnd = WindowNative.GetWindowHandle(this);
+        WindowAppearanceController.NakedWindow(hwnd);
+        WindowAppearanceController.SetTopMost(this, true);
+        WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
 
-        /* ------------------------------- MainWindow Constructor ------------------------------- */
-        public MainWindow()
+        // Change this line to set the width of the window
+    }
+
+    public void HandleGridPointerPressed(object sender, PointerRoutedEventArgs e)
+    {
+        Point mousePosition; // Added declaration for mousePosition
+        var mousePositionFromWindow = e.GetCurrentPoint((UIElement)sender);
+        Debug.WriteLine(mousePositionFromWindow.Position.X);
+        _dispatcherTimer.Tick += (s, m) =>
         {
-            InitializeComponent();
-           
-            var hwnd = WindowNative.GetWindowHandle(this);
-            WindowAppearanceController.NakedWindow(hwnd);
-            WindowAppearanceController.SetTopMost(this,true);
-            WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
-            var point= MouseController.RetrieveMousePosition();
-            WindowAppearanceController.SetWindowsPosition(this,point.X,point.Y);
+            mousePosition = MouseController.GetMousePosition();
+            WindowAppearanceController.SetWindowsPosition(this, mousePosition.X - (int)mousePositionFromWindow.Position.X, mousePosition.Y - (int)mousePositionFromWindow.Position.Y);
+        };
 
-           
+        _dispatcherTimer.Start();
+    }
 
-
-
-        }
+    public void HandleGridPointerRelased(object sender, PointerRoutedEventArgs e)
+    {
+        _dispatcherTimer.Stop();
     }
 }
