@@ -108,4 +108,9 @@
         public const int TOP = 0; // Places window at the top
         public const int TOPMOST = -1; // Places window at the topmost position
     }
+    public static class BlurOptions{
+        public const uint ENABLE = 0x00000001;
+        public const uint BLURREGION = 0x00000002;
+        public const uint TRANSITIONONMAXIMIZED = 0x00000004;
+    }
 }

@@ -1,1 +1,1 @@
-C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\sysinfo.csproj;x86
+C:\Users\USER\source\repos\samimdan\hejriClander\sysinfo.csproj;x86

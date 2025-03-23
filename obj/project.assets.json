@@ -1392,11 +1392,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\hejriClander\\hejriClander\\sysinfo.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\samimdan\\hejriClander\\sysinfo.csproj",
       "projectName": "sysinfo",
-      "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\hejriClander\\hejriClander\\sysinfo.csproj",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\samimdan\\hejriClander\\sysinfo.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\hejriClander\\hejriClander\\obj\\",
+      "outputPath": "C:\\Users\\USER\\source\\repos\\samimdan\\hejriClander\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

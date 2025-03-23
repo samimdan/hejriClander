@@ -10,14 +10,14 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>90f65ea3-100c-4db0-b3e1-8d41cc7280b9</PackageIdentityName>
     <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppX</LayoutDir>
+    <LayoutDir>C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppX</LayoutDir>
     <RegisteredManifestChecksum>378D6E7B2A46AA73CCA93B4B0B82734B00375DEB9DAB2E31726BFF451C826B66</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>90f65ea3-100c-4db0-b3e1-8d41cc7280b9_1.0.0.0_x86__x3hap7anq5jnt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>90f65ea3-100c-4db0-b3e1-8d41cc7280b9_x3hap7anq5jnt!App</RegisteredUserModeAppID>
@@ -26,28 +26,28 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-21T21:29:13.955</Modified>
+      <Modified>2025-03-23T06:52:40.524</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-21T19:19:46.013</Modified>
+      <Modified>2025-03-23T06:51:56.143</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-19T07:58:43.279</Modified>
+      <Modified>2025-03-22T17:43:06.679</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-21T21:29:13.719</Modified>
+      <Modified>2025-03-23T06:52:40.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-21T21:29:13.722</Modified>
+      <Modified>2025-03-23T06:52:40.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2651.64\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -873,45 +873,45 @@
       <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
       <Modified>2024-07-20T08:33:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.deps.json">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.deps.json">
       <PackagePath>sysinfo.deps.json</PackagePath>
-      <Modified>2025-03-19T07:58:43.081</Modified>
+      <Modified>2025-03-22T17:43:06.594</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
       <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>
-      <Modified>2025-03-19T07:56:03.797</Modified>
+      <Modified>2025-03-22T17:41:54.061</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\Fonts\IRANSansX-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\IRANSansX-Regular.ttf">
       <PackagePath>Assets\Fonts\IRANSansX-Regular.ttf</PackagePath>
-      <Modified>2025-03-19T07:56:03.798</Modified>
+      <Modified>2025-03-22T17:41:54.063</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.798</Modified>
+      <Modified>2025-03-22T17:41:54.064</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.799</Modified>
+      <Modified>2025-03-22T17:41:54.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.799</Modified>
+      <Modified>2025-03-22T17:41:54.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.800</Modified>
+      <Modified>2025-03-22T17:41:54.066</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.800</Modified>
+      <Modified>2025-03-22T17:41:54.067</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.801</Modified>
+      <Modified>2025-03-22T17:41:54.067</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2025-03-19T07:56:03.801</Modified>
+      <Modified>2025-03-22T17:41:54.068</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

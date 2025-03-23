@@ -15,7 +15,7 @@ namespace sysinfo;
 
 internal class WindowAppearanceController
 {
-   
+
     public static void NakedWindow(IntPtr hWnd)
     {
         var style = GetWindowLong(hWnd, Win32Index.STYLE);
@@ -49,6 +49,11 @@ internal class WindowAppearanceController
     {
         window.AppWindow.Resize(new SizeInt32 { Width = width, Height = height });
     }
+     public static void BlurWindow(IntPtr hWnd, bool enable)
+    {
+
+    }
+
 
     [DllImport(DllReferences.User32)]
 #pragma warning disable SYSLIB1054
@@ -74,5 +79,6 @@ internal class WindowAppearanceController
     private static extern int
 #pragma warning disable SYSLIB1054
         DwmSetWindowAttribute(IntPtr hwnd, int dwAttribute, ref uint pvAttribute, int cbAttribute);
-#pragma warning restore SYSLIB1054
+
+    
 }
