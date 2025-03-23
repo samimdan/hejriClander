@@ -4,12 +4,19 @@
         Title="Borderless Window"
         x:Name="RootWindow">
 
-    <Grid x:ConnectionId='2' x:Name="RootGrid"                                                                                      Background="#FFFFFF">
-        <TextBlock Text="Welcome to Start Menu Style!" 
+    <Grid x:ConnectionId='2' x:Name="RootGrid" Background="Transparent">
+        
+        <Grid x:ConnectionId='3' x:Name="ImageShadowContainer"
+              Width="60"
+              Height="60"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+             >
+       
+            <Image x:ConnectionId='4' x:Name="FunnyStateGif"
                    
-                   FontSize="16" 
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Center"/>
+                   Stretch="UniformToFill" />
+        </Grid>
     </Grid>
 </Window>
 

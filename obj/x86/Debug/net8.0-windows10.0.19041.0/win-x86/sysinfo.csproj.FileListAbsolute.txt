@@ -503,7 +503,6 @@ C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-wi
 C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\qualifiers.txt.intermediate
 C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MultipleQualifiersPerDimensionFound.txt
 C:\Users\USER\Documents\GitHub\hejriClander\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ProjectArchitectures.txt
-C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.exe
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\App.xbf
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MainWindow.xbf
@@ -756,3 +755,8 @@ C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.
 C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\qualifiers.txt.intermediate
 C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\MultipleQualifiersPerDimensionFound.txt
 C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\ProjectArchitectures.txt
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Security.Authentication.OAuth.Projection.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.ApplicationModel.Background.Projection.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.BadgeNotifications.Projection.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.Media.Capture.Projection.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll

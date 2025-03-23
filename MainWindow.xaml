@@ -1,14 +1,21 @@
-<Window x:Class="sysinfo.MainWindow"
+﻿<Window x:Class="sysinfo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Borderless Window"
         x:Name="RootWindow">
 
-    <Grid x:Name="RootGrid" PointerPressed="HandleGridPointerPressed" PointerReleased="HandleGridPointerRelased" Background="#FFFFFF">
-        <TextBlock Text="Welcome to Start Menu Style!" 
+    <Grid x:Name="RootGrid" Background="Transparent">
+        
+        <Grid x:Name="ImageShadowContainer"
+              Width="60"
+              Height="60"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+             >
+       
+            <Image x:Name="FunnyStateGif"
                    
-                   FontSize="16" 
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Center"/>
+                   Stretch="UniformToFill" />
+        </Grid>
     </Grid>
 </Window>
