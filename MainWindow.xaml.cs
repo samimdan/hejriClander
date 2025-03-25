@@ -1,28 +1,27 @@
 ﻿#region
-using System.Diagnostics;
+
+using System;
 using System.Drawing;
 using System.Numerics;
-using Microsoft.UI;
-using Microsoft.UI.Composition;
-using Microsoft.UI.Composition.SystemBackdrops;
-using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Hosting;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media.Imaging;
 using WinRT.Interop;
-using WinRT;
-using System.Runtime.InteropServices;
-using System;
+using Color = Windows.UI.Color;
+
 #endregion
 
 namespace sysinfo;
 
 public sealed partial class MainWindow : Window
 {
+    private readonly BitmapImage _bitmapImage;
     private readonly DispatcherTimer _dispatcherTimer = new();
+    private readonly DispatcherTimer _dateTime;
+    private Point _clickOffset;
 
-   
+    private bool _isDragging;
+
     /* ------------------------------- MainWindow Constructor ------------------------------- */
     public MainWindow()
 
@@ -35,65 +34,55 @@ public sealed partial class MainWindow : Window
         WindowAppearanceController.NakedWindow(hwnd);
         WindowAppearanceController.SetTopMost(this, true);
         WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
+        _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
+        _dispatcherTimer.Tick += MoveWindowWhileDragging;
 
-        // Set image
-        var bitmapImage = new BitmapImage(FunnyGif.Morning);
-        FunnyStateGif.Source = bitmapImage;
-        ImageShadowContainer.Loaded += (s, e) =>
+        _bitmapImage = new BitmapImage(FunnyGif.Morning);
+        FunnyStateGif.ImageSource = _bitmapImage;
+        ApplyBlur funnyGiftBlur = new(ImageShadowContainer, Color.FromArgb(128, 0, 0, 0), 35.0f, .2f,
+            new Vector3(0, 4, 0));
+        WindowAppearanceController.EnableBlur(hwnd);
+        WindowAppearanceController.RestoreDwmRendering(hwnd);
+        funnyGiftBlur.AddDropShadow();
+        _dateTime = new DispatcherTimer
         {
-            //Shadows should be applied after the image has been loaded and the size has been set.
-            AddDropShadow(ImageShadowContainer);
+            Interval = TimeSpan.FromSeconds(1)
         };
-        }
+        _dateTime.Tick += (sender, e) => {
+           var hour = DateTime.Now.Hour % 12;
+            if (hour == 0) hour = 12;
 
-        private void AddDropShadow(UIElement target)
-        {
-            var visual = ElementCompositionPreview.GetElementVisual(target);
-            var compositor = visual.Compositor;
+            HourTb.Text = hour.ToString();
+            MinuteTb.Text = DateTime.Now.Minute.ToString();
+            SecondTb.Text = DateTime.Now.ToString("ss");
+            TtTb.Text = DateTime.Now.Hour >= 12 ? "PM" : "AM";
+            SecondAnimation.Begin();
+        };
+        _dateTime.Start();
+    }
 
-            var dropShadow = compositor.CreateDropShadow();
-            dropShadow.Color = new Windows.UI.Color { A = 255, R = 0, G = 0, B = 0 };
-            dropShadow.BlurRadius = 20;
-            dropShadow.Opacity = 0.4f;
-            dropShadow.Offset = new System.Numerics.Vector3(0, 4, 0);
 
-            var shadowVisual = compositor.CreateSpriteVisual();
-            shadowVisual.Shadow = dropShadow;
+    public void HandleGridPointerPressed(object sender, PointerRoutedEventArgs e)
+    {
+        _isDragging = true;
+        _bitmapImage.UriSource = FunnyGif.SusageSit;
+        var positionInElement = e.GetCurrentPoint((UIElement)sender).Position;
+        _clickOffset = new Point((int)positionInElement.X, (int)positionInElement.Y);
+        _dispatcherTimer.Start();
+    }
 
-           
-            var containerVisual = ElementCompositionPreview.GetElementVisual(target);
-            ElementCompositionPreview.SetElementChildVisual(target, shadowVisual);
 
-            if (target is FrameworkElement element)
-            {
-                shadowVisual.Size = new System.Numerics.Vector2((float)element.ActualWidth, (float)element.ActualHeight);
+    public void MoveWindowWhileDragging(object? sender, object e)
+    {
+        if (!_isDragging) return;
+        var mouse = MouseController.GetMousePosition();
+        WindowAppearanceController.SetWindowsPosition(this, mouse.X - _clickOffset.X, mouse.Y - _clickOffset.Y);
+    }
 
-                element.SizeChanged += (sender, args) =>
-                {
-                    shadowVisual.Size = new System.Numerics.Vector2((float)args.NewSize.Width, (float)args.NewSize.Height);
-                };
-            }
-        }
-
+    public void HandleGridPointerRelased(object sender, PointerRoutedEventArgs e)
+    {
+        _isDragging = false;
+        _bitmapImage.UriSource = FunnyGif.GetRandomGif();
+        _dispatcherTimer.Stop();
+    }
 }
-
-
-//    public void HandleGridPointerPressed(object sender, PointerRoutedEventArgs e)
-//    {
-//        Point mousePosition; // Added declaration for mousePosition
-//        var mousePositionFromWindow = e.GetCurrentPoint((UIElement)sender);
-//        Debug.WriteLine(mousePositionFromWindow.Position.X);
-//        _dispatcherTimer.Tick += (s, m) =>
-//        {
-//            mousePosition = MouseController.GetMousePosition();
-//            WindowAppearanceController.SetWindowsPosition(this, mousePosition.X - (int)mousePositionFromWindow.Position.X, mousePosition.Y - (int)mousePositionFromWindow.Position.Y);
-//        };
-
-//        _dispatcherTimer.Start();
-//    }
-
-//    public void HandleGridPointerRelased(object sender, PointerRoutedEventArgs e)
-//    {
-//        _dispatcherTimer.Stop();
-//    }
-//}

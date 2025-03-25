@@ -676,8 +676,71 @@
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\IRANSansX-Regular.ttf">
       <PackagePath>Assets\Fonts\IRANSansX-Regular.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf">
+      <PackagePath>Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto.ttf">
+      <PackagePath>Assets\Fonts\Roboto.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\aaa-2x.gif">
+      <PackagePath>Assets\gift\aaa-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\BOOBA-2x.gif">
+      <PackagePath>Assets\gift\BOOBA-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\catKISS-2x.gif">
+      <PackagePath>Assets\gift\catKISS-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\docnotL.gif">
+      <PackagePath>Assets\gift\docnotL.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\HARAM.gif">
+      <PackagePath>Assets\gift\HARAM.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\HUH.gif">
+      <PackagePath>Assets\gift\HUH.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\lookBoth.gif">
+      <PackagePath>Assets\gift\lookBoth.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\MAD.gif">
+      <PackagePath>Assets\gift\MAD.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\Madgeclap-2x.gif">
+      <PackagePath>Assets\gift\Madgeclap-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\MadgeTime-2x.gif">
+      <PackagePath>Assets\gift\MadgeTime-2x.gif</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\morning.gif">
       <PackagePath>Assets\gift\morning.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\PLEASE-2x.gif">
+      <PackagePath>Assets\gift\PLEASE-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\RareParrot-2x.gif">
+      <PackagePath>Assets\gift\RareParrot-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\scratchh-2x.gif">
+      <PackagePath>Assets\gift\scratchh-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\skip-2x.gif">
+      <PackagePath>Assets\gift\skip-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\SUS.gif">
+      <PackagePath>Assets\gift\SUS.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\SusgeSit.png">
+      <PackagePath>Assets\gift\SusgeSit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\xddkiss.gif">
+      <PackagePath>Assets\gift\xddkiss.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\YEAH-2x.gif">
+      <PackagePath>Assets\gift\YEAH-2x.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\_d-2x.gif">
+      <PackagePath>Assets\gift\_d-2x.gif</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

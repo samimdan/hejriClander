@@ -113,4 +113,10 @@
         public const uint BLURREGION = 0x00000002;
         public const uint TRANSITIONONMAXIMIZED = 0x00000004;
     }
+    public static class WindowLayeredOptions
+    {
+        public const int EXLAYERS = 0x00080000;
+        public const int ALPHA = 0x00000002;
+        public const int COLORKEY = 0x00000001;
+    } 
 }

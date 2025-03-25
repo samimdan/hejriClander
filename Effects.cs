@@ -1,59 +1,83 @@
-﻿using System.Numerics;
-using Windows.UI;
-using Microsoft.UI;
-using Microsoft.UI.Composition;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Hosting;
-using Microsoft.UI.Xaml.Media.Imaging;
+﻿#region
 
-namespace sysinfo
+using System.Numerics;
+using Windows.UI;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Hosting;
+
+#endregion
+
+namespace sysinfo;
+
+/// <summary>
+///     Provides visual effects for UI elements.
+/// </summary>
+public class ApplyBlur
 {
     /// <summary>
-    /// Provides visual effects for UI elements.
+    ///     Initializes a new instance of the <see cref="ApplyBlur" /> class.
     /// </summary>
-  
-        public class ShadowApplier
-        {
-            private readonly Compositor _compositor;
-            private DropShadow _dropShadow;
-            private SpriteVisual _shadowVisual;
-
-            // سازنده با تنظیمات اولیه سایه
-            public ShadowApplier(Grid rootGrid)
-            {
-                _compositor = ElementCompositionPreview.GetElementVisual(rootGrid).Compositor;
-
-                // ایجاد سایه و تنظیمات اولیه
-                _dropShadow = _compositor.CreateDropShadow();
-                _dropShadow.Color = Colors.Black;
-                _dropShadow.BlurRadius = 20.0f;
-                _dropShadow.Opacity = 0.5f;
-
-                // ایجاد یک Visual برای نمایش سایه
-                _shadowVisual = _compositor.CreateSpriteVisual();
-            }
-
-            public void ApplyDropShadow(Border targetBorder)
-            {
-                // تنظیم سایز Visual به سایز کنترل هدف
-                _shadowVisual.Size = new Vector2(
-                    (float)targetBorder.ActualWidth,
-                    (float)targetBorder.ActualHeight
-                );
-
-                // تنظیم سایه به Visual
-                _shadowVisual.Shadow = _dropShadow;
-
-                // اتصال Visual به کنترل هدف
-                ElementCompositionPreview.SetElementChildVisual(targetBorder, _shadowVisual);
-            }
-
-            public void UpdateShadowSettings(Color color, float blurRadius, float opacity)
-            {
-                _dropShadow.Color = color;
-                _dropShadow.BlurRadius = blurRadius;
-                _dropShadow.Opacity = opacity;
-            }
-        }
+    /// <param name="element">The UI element to which the blur effect will be applied.</param>
+    /// <param name="dropShadowColor">The color of the drop shadow.</param>
+    /// <param name="blurRadius">The radius of the blur effect.</param>
+    /// <param name="opacity">The opacity of the drop shadow.</param>
+    /// <param name="dropShadowOffset">The offset of the drop shadow.</param>
+    public ApplyBlur(FrameworkElement element, Color dropShadowColor, float blurRadius, float opacity,
+        Vector3 dropShadowOffset)
+    {
+        Element = element;
+        DropShadowColor = dropShadowColor;
+        BlurRadius = blurRadius;
+        Opacity = opacity;
+        DropShadowOffset = dropShadowOffset;
     }
+
+
+    private FrameworkElement Element { get; }
+
+
+    private Color DropShadowColor { get; }
+
+
+    private float BlurRadius { get; }
+
+
+    private float Opacity { get; }
+
+
+    private Vector3 DropShadowOffset { get; }
+
+
+    public void AddDropShadow()
+    {
+        Element.Loaded +=  (sender, args) =>
+        {
+            var visual = ElementCompositionPreview.GetElementVisual(Element);
+            var compositor = visual.Compositor;
+            // Get graphic engine
+            var dropShadow = compositor.CreateDropShadow();
+            dropShadow.Color = DropShadowColor;
+            dropShadow.BlurRadius = BlurRadius;
+            dropShadow.Opacity = Opacity;
+            dropShadow.Offset = DropShadowOffset;
+
+            var shadowVisual = compositor.CreateSpriteVisual();
+            shadowVisual.Shadow = dropShadow;
+            // Create layer for shadow
+            var maskBrush = compositor.CreateMaskBrush();
+            var surfaceBrush = compositor.CreateSurfaceBrush();
+            var containerVisual = ElementCompositionPreview.GetElementVisual(Element);
+            ElementCompositionPreview.SetElementChildVisual(Element, shadowVisual);
+
+            if (Element is not FrameworkElement element) return;
+            shadowVisual.Size = new Vector2((float)element.ActualWidth, (float)element.ActualHeight);
+
+            element.SizeChanged += (sender, args) =>
+            {
+                shadowVisual.Size = new Vector2((float)args.NewSize.Width, (float)args.NewSize.Height);
+            };
+  
+    
+        };
+    }
+}

@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-23T18:30:10.115</Modified>
+      <Modified>2025-03-25T08:14:16.632</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-23T18:30:09.802</Modified>
+      <Modified>2025-03-25T08:14:16.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-23T18:30:09.647</Modified>
+      <Modified>2025-03-25T08:14:15.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-23T18:30:09.657</Modified>
+      <Modified>2025-03-25T08:14:15.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -891,7 +891,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.deps.json">
       <PackagePath>sysinfo.deps.json</PackagePath>
-      <Modified>2025-03-23T17:54:07.888</Modified>
+      <Modified>2025-03-25T08:14:15.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
       <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>
@@ -901,9 +901,93 @@
       <PackagePath>Assets\Fonts\IRANSansX-Regular.ttf</PackagePath>
       <Modified>2025-03-22T17:41:54.063</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf">
+      <PackagePath>Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf</PackagePath>
+      <Modified>2025-03-24T13:28:36.191</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto.ttf">
+      <PackagePath>Assets\Fonts\Roboto.ttf</PackagePath>
+      <Modified>2025-03-24T13:28:36.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\aaa-2x.gif">
+      <PackagePath>Assets\gift\aaa-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:47:35.369</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\BOOBA-2x.gif">
+      <PackagePath>Assets\gift\BOOBA-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:47:53.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\catKISS-2x.gif">
+      <PackagePath>Assets\gift\catKISS-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:54:03.264</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\docnotL.gif">
+      <PackagePath>Assets\gift\docnotL.gif</PackagePath>
+      <Modified>2025-03-23T19:48:58.933</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\HARAM.gif">
+      <PackagePath>Assets\gift\HARAM.gif</PackagePath>
+      <Modified>2025-03-23T19:53:54.726</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\HUH.gif">
+      <PackagePath>Assets\gift\HUH.gif</PackagePath>
+      <Modified>2025-03-23T19:48:06.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\lookBoth.gif">
+      <PackagePath>Assets\gift\lookBoth.gif</PackagePath>
+      <Modified>2025-03-23T19:54:46.780</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\MAD.gif">
+      <PackagePath>Assets\gift\MAD.gif</PackagePath>
+      <Modified>2025-03-23T19:54:38.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\Madgeclap-2x.gif">
+      <PackagePath>Assets\gift\Madgeclap-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:48:29.746</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\MadgeTime-2x.gif">
+      <PackagePath>Assets\gift\MadgeTime-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:40:55.753</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\morning.gif">
       <PackagePath>Assets\gift\morning.gif</PackagePath>
       <Modified>2025-03-22T08:36:55.263</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\PLEASE-2x.gif">
+      <PackagePath>Assets\gift\PLEASE-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:48:17.841</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\RareParrot-2x.gif">
+      <PackagePath>Assets\gift\RareParrot-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:50:34.106</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\scratchh-2x.gif">
+      <PackagePath>Assets\gift\scratchh-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:40:45.820</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\skip-2x.gif">
+      <PackagePath>Assets\gift\skip-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:54:18.384</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\SUS.gif">
+      <PackagePath>Assets\gift\SUS.gif</PackagePath>
+      <Modified>2025-03-23T19:47:26.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\SusgeSit.png">
+      <PackagePath>Assets\gift\SusgeSit.png</PackagePath>
+      <Modified>2025-03-23T19:41:04.905</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\xddkiss.gif">
+      <PackagePath>Assets\gift\xddkiss.gif</PackagePath>
+      <Modified>2025-03-23T19:40:14.157</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\YEAH-2x.gif">
+      <PackagePath>Assets\gift\YEAH-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:49:09.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\_d-2x.gif">
+      <PackagePath>Assets\gift\_d-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:48:46.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
