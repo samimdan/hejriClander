@@ -33,7 +33,7 @@ public sealed partial class MainWindow : Window
         WindowAppearanceController.NakedWindow(hwnd);
         //WindowAppearanceController.SetTopMost(this, true);
         //WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
-        WindowAppearanceController.EnableBlur(hwnd,true);
+        WindowAppearanceController.EnableBlur(hwnd);
         _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
         _dispatcherTimer.Tick += MoveWindowWhileDragging;
 
@@ -51,11 +51,11 @@ public sealed partial class MainWindow : Window
            var hour = DateTime.Now.Hour % 12;
             if (hour == 0) hour = 12;
 
-            HourTb.Text = hour.ToString();
-            MinuteTb.Text = DateTime.Now.Minute.ToString();
-            SecondTb.Text = DateTime.Now.ToString("ss");
-            TtTb.Text = DateTime.Now.Hour >= 12 ? "PM" : "AM";
-            SecondAnimation.Begin();
+            //HourTb.Text = hour.ToString();
+            //MinuteTb.Text = DateTime.Now.Minute.ToString();
+            //SecondTb.Text = DateTime.Now.ToString("ss");
+            //TtTb.Text = DateTime.Now.Hour >= 12 ? "PM" : "AM";
+            //SecondAnimation.Begin();
         };
         _dateTime.Start();
     }

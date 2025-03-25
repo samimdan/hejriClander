@@ -4,76 +4,9 @@
         Title="Borderless Window"
         x:Name="RootWindow">
 
-    <Grid x:ConnectionId='2' x:Name="RootGrid" Background="#AA202020"                                          
+    <Grid x:ConnectionId='2' x:Name="RootGrid" Background="#60202020"                                          
                                                     >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions >
-        <Grid Grid.Row="0" Background="Transparent">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
         
-                <Grid Grid.Column="1">
-                    <!--<Rectangle x:Name="ImageShadowContainer"
-                               Width="44"
-                               Height="44"
-                               HorizontalAlignment="Right"
-                               VerticalAlignment="Top"
-                               RadiusX="20"
-                               RadiusY="20"
-                               Margin="0 10 5 5">
-                        <Rectangle.Fill>
-                            <ImageBrush x:Name="FunnyStateGif" Stretch="UniformToFill" />
-                        </Rectangle.Fill>
-                    </Rectangle>-->
-                    <Grid 
-                          HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
-                          
-                          >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                    <TextBlock x:ConnectionId='6' Grid.Row="0" x:Name="HourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin"  FontSize="80"  />
-                    <StackPanel Grid.Row="1"  Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-                        <TextBlock x:ConnectionId='8' x:Name="MinuteTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right"  FontSize="45" FontWeight="400" />
-                        <TextBlock x:ConnectionId='9' x:Name="SecondTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right" FontSize="35"  FontWeight="400" Opacity="1"  />
-                    </StackPanel>
-                    <TextBlock x:ConnectionId='7' x:Name="TtTb" Grid.Row="2"   FontSize="25"  FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Center" Padding="0 10 0 0 "/>
-                    <Grid.Resources>
-                        <Storyboard x:ConnectionId='10' x:Name="SecondAnimation">
-                            <DoubleAnimation 
-                                Storyboard.TargetName="SecondTb"
-                                Storyboard.TargetProperty="Opacity"
-                                From="0"
-                                To="1"
-                                Duration="0:0:1"/>
-                        </Storyboard>
-                    </Grid.Resources>
-                </Grid>
-                </Grid>
-            <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="3*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <TextBlock x:ConnectionId='3' Grid.Row="0" x:Name="DayTb" Text="4" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto"  FontSize="80"  />
-                <TextBlock x:ConnectionId='4' Grid.Row="1" x:Name="DateTb"  Text="فروردین" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="15"  />
-                <TextBlock x:ConnectionId='5' Grid.Row="2" x:Name="MonthTb" Text="دوشنبه" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="15"  />
-
-            </Grid>
-                  
-                  
-            
-           
-        </Grid>
     </Grid>
 </Window>
 

@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using Microsoft.UI;
@@ -63,12 +64,12 @@ internal class WindowAppearanceController
     }
 
 
-    public static void EnableBlur(IntPtr hwnd, bool useAcrylic = true)
+    public static void EnableBlur(IntPtr hwnd)
     {
         var accent = new ACCENT_POLICY
         {
-            AccentState = ACCENT_STATE.ACCENT_ENABLE_ACRYLICBLURBEHIND,
-            GradientColor = unchecked((int)0xCC202020) // ARGB (alpha + tint)
+            AccentState = ACCENT_STATE.ACCENT_ENABLE_ACRYLICBLURBEHIND, // Set to ACCENT_ENABLE_BLURBEHIND for classic blur
+            GradientColor = unchecked((int)0xCC202020)  // ARGB value
         };
 
         int size = Marshal.SizeOf(accent);
@@ -78,8 +79,8 @@ internal class WindowAppearanceController
         var data = new WINDOWCOMPOSITIONATTRIBDATA
         {
             Attribute = WINDOWCOMPOSITIONATTRIB.WCA_ACCENT_POLICY,
-            Data = accentPtr,
-            SizeOfData = size
+            SizeOfData = size,
+            Data = accentPtr
         };
 
         int result = SetWindowCompositionAttribute(hwnd, ref data);
