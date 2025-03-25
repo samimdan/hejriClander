@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-25T08:14:16.632</Modified>
+      <Modified>2025-03-25T09:24:12.040</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-25T08:14:16.251</Modified>
+      <Modified>2025-03-25T09:21:31.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-25T08:14:15.143</Modified>
+      <Modified>2025-03-25T09:24:11.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-25T08:14:15.238</Modified>
+      <Modified>2025-03-25T09:24:11.741</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

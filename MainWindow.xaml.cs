@@ -27,23 +27,22 @@ public sealed partial class MainWindow : Window
 
     {
         InitializeComponent();
-
-        // Set the window appearance
-        WindowAppearanceController.SetWindowsSize(this, 230, 1000);
+      
         var hwnd = WindowNative.GetWindowHandle(this);
+       // WindowAppearanceController.SetWindowsSize(this, 230, 1000);
         WindowAppearanceController.NakedWindow(hwnd);
-        WindowAppearanceController.SetTopMost(this, true);
-        WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
+        //WindowAppearanceController.SetTopMost(this, true);
+        //WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
+        WindowAppearanceController.EnableBlur(hwnd,true);
         _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
         _dispatcherTimer.Tick += MoveWindowWhileDragging;
 
         _bitmapImage = new BitmapImage(FunnyGif.Morning);
-        FunnyStateGif.ImageSource = _bitmapImage;
-        ApplyBlur funnyGiftBlur = new(ImageShadowContainer, Color.FromArgb(128, 0, 0, 0), 35.0f, .2f,
-            new Vector3(0, 4, 0));
-        WindowAppearanceController.EnableBlur(hwnd);
-        WindowAppearanceController.RestoreDwmRendering(hwnd);
-        funnyGiftBlur.AddDropShadow();
+        //FunnyStateGif.ImageSource = _bitmapImage;
+        //ApplyBlur funnyGiftBlur = new(ImageShadowContainer, Color.FromArgb(128, 0, 0, 0), 35.0f, .2f,
+          //  new Vector3(0, 4, 0));
+        //WindowAppearanceController.RestoreDwmRendering(hwnd);
+       // funnyGiftBlur.AddDropShadow();
         _dateTime = new DispatcherTimer
         {
             Interval = TimeSpan.FromSeconds(1)

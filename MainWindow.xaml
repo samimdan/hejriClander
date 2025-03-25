@@ -4,7 +4,7 @@
         Title="Borderless Window"
         x:Name="RootWindow">
 
-    <Grid x:Name="RootGrid" Background="Transparent" PointerPressed="HandleGridPointerPressed"
+    <Grid x:Name="RootGrid" Background="#AA202020" PointerPressed="HandleGridPointerPressed"
           PointerReleased="HandleGridPointerRelased">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -18,19 +18,18 @@
             </Grid.ColumnDefinitions>
         
                 <Grid Grid.Column="1">
-                    <Rectangle  x:Name="ImageShadowContainer"
-                     Width="44"
-                     Height="44"
-                     HorizontalAlignment="Right"
-                     VerticalAlignment="Top"
-                       RadiusX="20"
-                       RadiusY="20"
-                     Margin="0 10 5 5"
-                     >
+                    <!--<Rectangle x:Name="ImageShadowContainer"
+                               Width="44"
+                               Height="44"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Top"
+                               RadiusX="20"
+                               RadiusY="20"
+                               Margin="0 10 5 5">
                         <Rectangle.Fill>
                             <ImageBrush x:Name="FunnyStateGif" Stretch="UniformToFill" />
                         </Rectangle.Fill>
-                    </Rectangle>
+                    </Rectangle>-->
                     <Grid 
                           HorizontalAlignment="Center"
                          VerticalAlignment="Center"

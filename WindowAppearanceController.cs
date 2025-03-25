@@ -62,23 +62,13 @@ internal class WindowAppearanceController
         window.AppWindow.Resize(new SizeInt32 { Width = width, Height = height });
     }
 
-    public static void MakeWindowTransparent(IntPtr hWnd)
-    {
 
-
-
-        int extendedStyle = GetWindowLong(hWnd, Win32Index.EXSTYLE);
-        SetWindowLong(hWnd, Win32Index.EXSTYLE, extendedStyle | WindowLayeredOptions.EXLAYERS);
-        SetLayeredWindowAttributes(hWnd, 0, 0, WindowLayeredOptions.COLORKEY);
-    }
     public static void EnableBlur(IntPtr hwnd, bool useAcrylic = true)
     {
         var accent = new ACCENT_POLICY
         {
-            AccentState = useAcrylic
-                ? ACCENT_STATE.ACCENT_ENABLE_ACRYLICBLURBEHIND
-                : ACCENT_STATE.ACCENT_ENABLE_BLURBEHIND,
-            GradientColor = unchecked((int)0xCC1E1E1E)
+            AccentState = ACCENT_STATE.ACCENT_ENABLE_ACRYLICBLURBEHIND,
+            GradientColor = unchecked((int)0xCC202020) // ARGB (alpha + tint)
         };
 
         int size = Marshal.SizeOf(accent);
@@ -88,20 +78,18 @@ internal class WindowAppearanceController
         var data = new WINDOWCOMPOSITIONATTRIBDATA
         {
             Attribute = WINDOWCOMPOSITIONATTRIB.WCA_ACCENT_POLICY,
-            SizeOfData = size,
-            Data = accentPtr
+            Data = accentPtr,
+            SizeOfData = size
         };
 
-        SetWindowCompositionAttribute(hwnd, ref data);
+        int result = SetWindowCompositionAttribute(hwnd, ref data);
         Marshal.FreeHGlobal(accentPtr);
 
-        // DWM - corner radius & rendering policy
-        uint cornerPref = 2; // DWMWCP_ROUND
-        DwmSetWindowAttribute(hwnd, 33, ref cornerPref, sizeof(uint));
-
-        uint ncRenderingEnabled = 2; // DWMNCRP_ENABLED
-        DwmSetWindowAttribute(hwnd, 2, ref ncRenderingEnabled, sizeof(uint));
-
+        if (result == 0)
+        {
+            int err = Marshal.GetLastWin32Error();
+            throw new Exception($"Blur failed. Win32 Error: {err}");
+        }
     }
     public static void RestoreDwmRendering(IntPtr hwnd)
     {
