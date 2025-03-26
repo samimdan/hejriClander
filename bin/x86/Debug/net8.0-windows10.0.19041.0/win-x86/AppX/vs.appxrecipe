@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-25T10:56:21.538</Modified>
+      <Modified>2025-03-25T20:31:10.568</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-25T10:51:01.733</Modified>
+      <Modified>2025-03-25T19:14:13.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-25T10:56:21.242</Modified>
+      <Modified>2025-03-25T20:31:09.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-25T10:56:21.250</Modified>
+      <Modified>2025-03-25T20:31:09.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -891,7 +891,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.deps.json">
       <PackagePath>sysinfo.deps.json</PackagePath>
-      <Modified>2025-03-25T08:14:15.962</Modified>
+      <Modified>2025-03-25T18:12:29.762</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
       <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>

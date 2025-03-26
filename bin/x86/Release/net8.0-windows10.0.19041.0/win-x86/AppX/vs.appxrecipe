@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-F5HPIF2</Machine>
+    <WindowsUser>USER</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>90f65ea3-100c-4db0-b3e1-8d41cc7280b9</PackageIdentityName>
+    <PackageIdentityPublisher>CN=USER</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\AppX</LayoutDir>
+    <RegisteredManifestChecksum>26248151F830D37C7EE974C1FD8E0449620DAF9DC29DF76BCE2FE45CD78B3B7F</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>90f65ea3-100c-4db0-b3e1-8d41cc7280b9_1.0.0.0_x86__x3hap7anq5jnt</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>90f65ea3-100c-4db0-b3e1-8d41cc7280b9_x3hap7anq5jnt!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>90f65ea3-100c-4db0-b3e1-8d41cc7280b9</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=USER</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-03-25T20:48:15.232</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2025-03-25T20:47:58.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
+      <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
+      <Modified>2025-03-25T20:47:58.588</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
+      <PackagePath>sysinfo.exe</PackagePath>
+      <Modified>2025-03-25T20:47:57.582</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x86\native\WebView2Loader.dll">
+      <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
+      <Modified>2024-11-10T08:57:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x64\native\WebView2Loader.dll">
+      <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
+      <Modified>2024-11-10T08:57:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-arm64\native\WebView2Loader.dll">
+      <PackagePath>runtimes\win-arm64\native\WebView2Loader.dll</PackagePath>
+      <Modified>2024-11-10T08:57:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\Microsoft.DiaSymReader.Native.x86.dll">
+      <PackagePath>Microsoft.DiaSymReader.Native.x86.dll</PackagePath>
+      <Modified>2024-11-27T04:21:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\System.IO.Compression.Native.dll">
+      <PackagePath>System.IO.Compression.Native.dll</PackagePath>
+      <Modified>2025-02-12T04:42:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\clretwrc.dll">
+      <PackagePath>clretwrc.dll</PackagePath>
+      <Modified>2025-02-12T04:32:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\clrgc.dll">
+      <PackagePath>clrgc.dll</PackagePath>
+      <Modified>2025-02-12T04:31:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\clrjit.dll">
+      <PackagePath>clrjit.dll</PackagePath>
+      <Modified>2025-02-12T04:31:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\coreclr.dll">
+      <PackagePath>coreclr.dll</PackagePath>
+      <Modified>2025-02-12T04:30:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\createdump.exe">
+      <PackagePath>createdump.exe</PackagePath>
+      <Modified>2025-02-12T04:32:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\hostfxr.dll">
+      <PackagePath>hostfxr.dll</PackagePath>
+      <Modified>2025-02-12T04:42:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\hostpolicy.dll">
+      <PackagePath>hostpolicy.dll</PackagePath>
+      <Modified>2025-02-12T04:42:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\mscordaccore.dll">
+      <PackagePath>mscordaccore.dll</PackagePath>
+      <Modified>2025-02-12T04:36:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\mscordaccore_x86_x86_8.0.1425.11118.dll">
+      <PackagePath>mscordaccore_x86_x86_8.0.1425.11118.dll</PackagePath>
+      <Modified>2025-02-12T04:36:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\mscordbi.dll">
+      <PackagePath>mscordbi.dll</PackagePath>
+      <Modified>2025-02-12T04:36:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\mscorrc.dll">
+      <PackagePath>mscorrc.dll</PackagePath>
+      <Modified>2025-02-12T04:32:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.netcore.app.runtime.win-x86\8.0.14\runtimes\win-x86\native\msquic.dll">
+      <PackagePath>msquic.dll</PackagePath>
+      <Modified>2024-03-12T16:41:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x86\native\WebView2Loader.dll">
+      <PackagePath>WebView2Loader.dll</PackagePath>
+      <Modified>2024-11-10T08:57:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\runtimes\win-x86\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+      <Modified>2025-03-06T18:41:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\runtimes\win-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2025-03-06T18:41:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.Core.xml">
+      <PackagePath>Microsoft.Web.WebView2.Core.xml</PackagePath>
+      <Modified>2024-11-10T08:45:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\lib_manual\netcoreapp3.0\Microsoft.Web.WebView2.WinForms.xml">
+      <PackagePath>Microsoft.Web.WebView2.WinForms.xml</PackagePath>
+      <Modified>2024-11-10T08:45:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\lib_manual\net5.0-windows10.0.17763.0\Microsoft.Web.WebView2.Wpf.xml">
+      <PackagePath>Microsoft.Web.WebView2.Wpf.xml</PackagePath>
+      <Modified>2024-11-10T08:45:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\linked\System.ComponentModel.dll">
+      <PackagePath>System.ComponentModel.dll</PackagePath>
+      <Modified>2025-03-25T20:48:09.122</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\linked\System.Drawing.dll">
+      <PackagePath>System.Drawing.dll</PackagePath>
+      <Modified>2025-03-25T20:48:09.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\Microsoft.InteractiveExperiences.Projection.dll">
+      <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
+      <Modified>2025-03-25T20:48:11.316</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\Microsoft.WinUI.dll">
+      <PackagePath>Microsoft.WinUI.dll</PackagePath>
+      <Modified>2025-03-25T20:48:11.477</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\sysinfo.dll">
+      <PackagePath>sysinfo.dll</PackagePath>
+      <Modified>2025-03-25T20:48:11.587</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Collections.Concurrent.dll">
+      <PackagePath>System.Collections.Concurrent.dll</PackagePath>
+      <Modified>2025-03-25T20:48:11.694</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Collections.Immutable.dll">
+      <PackagePath>System.Collections.Immutable.dll</PackagePath>
+      <Modified>2025-03-25T20:48:11.800</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Collections.dll">
+      <PackagePath>System.Collections.dll</PackagePath>
+      <Modified>2025-03-25T20:48:11.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.ComponentModel.TypeConverter.dll">
+      <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Diagnostics.StackTrace.dll">
+      <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.108</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Drawing.Primitives.dll">
+      <PackagePath>System.Drawing.Primitives.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.204</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.IO.Compression.dll">
+      <PackagePath>System.IO.Compression.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.IO.MemoryMappedFiles.dll">
+      <PackagePath>System.IO.MemoryMappedFiles.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.427</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Linq.Expressions.dll">
+      <PackagePath>System.Linq.Expressions.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.533</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Linq.dll">
+      <PackagePath>System.Linq.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.643</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.ObjectModel.dll">
+      <PackagePath>System.ObjectModel.dll</PackagePath>
+      <Modified>2025-03-25T20:48:12.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Private.CoreLib.dll">
+      <PackagePath>System.Private.CoreLib.dll</PackagePath>
+      <Modified>2025-03-25T20:48:14.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Private.Uri.dll">
+      <PackagePath>System.Private.Uri.dll</PackagePath>
+      <Modified>2025-03-25T20:48:14.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Reflection.Metadata.dll">
+      <PackagePath>System.Reflection.Metadata.dll</PackagePath>
+      <Modified>2025-03-25T20:48:14.378</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Runtime.InteropServices.dll">
+      <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
+      <Modified>2025-03-25T20:48:14.479</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Security.Cryptography.dll">
+      <PackagePath>System.Security.Cryptography.dll</PackagePath>
+      <Modified>2025-03-25T20:48:14.590</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
+      <Modified>2025-03-25T20:48:14.722</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\WinRT.Runtime.dll">
+      <PackagePath>WinRT.Runtime.dll</PackagePath>
+      <Modified>2025-03-25T20:48:15.083</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\sysinfo.deps.json">
+      <PackagePath>sysinfo.deps.json</PackagePath>
+      <Modified>2025-03-25T20:48:15.136</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
+      <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>
+      <Modified>2025-03-22T17:41:54.061</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\IRANSansX-Regular.ttf">
+      <PackagePath>Assets\Fonts\IRANSansX-Regular.ttf</PackagePath>
+      <Modified>2025-03-22T17:41:54.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf">
+      <PackagePath>Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf</PackagePath>
+      <Modified>2025-03-24T13:28:36.191</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto.ttf">
+      <PackagePath>Assets\Fonts\Roboto.ttf</PackagePath>
+      <Modified>2025-03-24T13:28:36.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\aaa-2x.gif">
+      <PackagePath>Assets\gift\aaa-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:47:35.369</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\BOOBA-2x.gif">
+      <PackagePath>Assets\gift\BOOBA-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:47:53.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\catKISS-2x.gif">
+      <PackagePath>Assets\gift\catKISS-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:54:03.264</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\docnotL.gif">
+      <PackagePath>Assets\gift\docnotL.gif</PackagePath>
+      <Modified>2025-03-23T19:48:58.933</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\HARAM.gif">
+      <PackagePath>Assets\gift\HARAM.gif</PackagePath>
+      <Modified>2025-03-23T19:53:54.726</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\HUH.gif">
+      <PackagePath>Assets\gift\HUH.gif</PackagePath>
+      <Modified>2025-03-23T19:48:06.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\lookBoth.gif">
+      <PackagePath>Assets\gift\lookBoth.gif</PackagePath>
+      <Modified>2025-03-23T19:54:46.780</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\MAD.gif">
+      <PackagePath>Assets\gift\MAD.gif</PackagePath>
+      <Modified>2025-03-23T19:54:38.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\Madgeclap-2x.gif">
+      <PackagePath>Assets\gift\Madgeclap-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:48:29.746</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\MadgeTime-2x.gif">
+      <PackagePath>Assets\gift\MadgeTime-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:40:55.753</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\morning.gif">
+      <PackagePath>Assets\gift\morning.gif</PackagePath>
+      <Modified>2025-03-22T08:36:55.263</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\PLEASE-2x.gif">
+      <PackagePath>Assets\gift\PLEASE-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:48:17.841</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\RareParrot-2x.gif">
+      <PackagePath>Assets\gift\RareParrot-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:50:34.106</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\scratchh-2x.gif">
+      <PackagePath>Assets\gift\scratchh-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:40:45.820</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\skip-2x.gif">
+      <PackagePath>Assets\gift\skip-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:54:18.384</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\SUS.gif">
+      <PackagePath>Assets\gift\SUS.gif</PackagePath>
+      <Modified>2025-03-23T19:47:26.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\SusgeSit.png">
+      <PackagePath>Assets\gift\SusgeSit.png</PackagePath>
+      <Modified>2025-03-23T19:41:04.905</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\xddkiss.gif">
+      <PackagePath>Assets\gift\xddkiss.gif</PackagePath>
+      <Modified>2025-03-23T19:40:14.157</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\YEAH-2x.gif">
+      <PackagePath>Assets\gift\YEAH-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:49:09.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\_d-2x.gif">
+      <PackagePath>Assets\gift\_d-2x.gif</PackagePath>
+      <Modified>2025-03-23T19:48:46.296</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.066</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <Modified>2025-03-22T17:41:54.068</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.435.154.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.435.154.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.435.154.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.435.154.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.435.154.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.435.154.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.435.154.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.435.154.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.7.250310001\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
