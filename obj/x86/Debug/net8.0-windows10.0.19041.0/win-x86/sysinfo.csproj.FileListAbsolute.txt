@@ -716,7 +716,6 @@ C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\msquic.dll
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.SDK.NET.dll
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WinRT.Runtime.dll
-C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Web.WebView2.Core.Projection.dll
 C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\sysinfo.csproj.AssemblyReference.cache
 C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\App.g.i.cs
 C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\App.g.cs
@@ -760,3 +759,11 @@ C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.BadgeNotifications.Projection.dll
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.Media.Capture.Projection.dll
 C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Web.WebView2.Core.xml
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Microsoft.Web.WebView2.Wpf.xml

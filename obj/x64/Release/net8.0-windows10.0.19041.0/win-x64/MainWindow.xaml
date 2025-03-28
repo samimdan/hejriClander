@@ -28,14 +28,16 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>  
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <TextBlock x:ConnectionId='6' Grid.Row="0" x:Name="HourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin"  FontSize="80"  />
-                    <StackPanel Grid.Row="1"  Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-                        <TextBlock x:ConnectionId='8' x:Name="MinuteTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right"  FontSize="45" FontWeight="400" />
-                        <TextBlock x:ConnectionId='9' x:Name="SecondTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right" FontSize="35"  FontWeight="400" Opacity="1"  />
-                    </StackPanel>
-                    <TextBlock x:ConnectionId='7' x:Name="TtTb" Grid.Row="2"   FontSize="25"  FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Center" Padding="0 10 0 0 "/>
+                    
+                        <TextBlock x:ConnectionId='7' Grid.Row="1" x:Name="MinuteTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right"  FontSize="45" FontWeight="400" />
+                        <TextBlock x:ConnectionId='8' Grid.Row="2" x:Name="SecondTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right" FontSize="35"  FontWeight="400" Opacity="1"  />
+                    <FontIcon x:ConnectionId='9' x:Name="TdIcon"  Grid.Row="3"  FontSize="30"  />
+
+                    <!-- <TextBlock x:Name="TtTb" Grid.Row="3"   FontSize="25"  FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Center" /> -->
                     <Grid.Resources>
                         <Storyboard x:ConnectionId='10' x:Name="SecondAnimation">
                             <DoubleAnimation 

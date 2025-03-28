@@ -1,4 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PublishDir>bin\Release\net8.0\publish\</PublishDir>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>true</PublishTrimmed>
+  </PropertyGroup>
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
@@ -12,6 +21,29 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Assets\moon.png" />
+    <Content Remove="Assets\moon_blizzard.png" />
+    <Content Remove="Assets\moon_clouds.png" />
+    <Content Remove="Assets\moon_fog.png" />
+    <Content Remove="Assets\moon_lighting.png" />
+    <Content Remove="Assets\moon_rain.png" />
+    <Content Remove="Assets\moon_rain_snow.png" />
+    <Content Remove="Assets\NA_blizzard.png" />
+    <Content Remove="Assets\NA_clouds.png" />
+    <Content Remove="Assets\NA_fog.png" />
+    <Content Remove="Assets\NA_lighting.png" />
+    <Content Remove="Assets\NA_rain.png" />
+    <Content Remove="Assets\NA_rain_snow.png" />
+    <Content Remove="Assets\sun.png" />
+    <Content Remove="Assets\sun_blizzard.png" />
+    <Content Remove="Assets\sun_clouds.png" />
+    <Content Remove="Assets\sun_fog.png" />
+    <Content Remove="Assets\sun_lighting.png" />
+    <Content Remove="Assets\sun_rain.png" />
+    <Content Remove="Assets\sun_rain_snow.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -39,6 +71,7 @@
     <PackageReference Include="HtmlAgilityPack" Version="1.12.0" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250310001" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\NewFolder\" />

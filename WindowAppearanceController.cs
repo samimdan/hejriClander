@@ -17,18 +17,7 @@ namespace sysinfo;
 
 internal class WindowAppearanceController
 {
-    [StructLayout(LayoutKind.Sequential)]
-    struct WINDOWCOMPOSITIONATTRIBDATA
-    {
-        public WINDOWCOMPOSITIONATTRIB Attribute;
-        public IntPtr Data;
-        public int SizeOfData;
-    }
-    enum WINDOWCOMPOSITIONATTRIB
-    {
-        WCA_UNDEFINED = 0,
-        WCA_ACCENT_POLICY = 19
-    }
+   
 
     public static void NakedWindow(IntPtr hWnd)
     {
@@ -65,69 +54,19 @@ internal class WindowAppearanceController
 
 
   
-    public static void RestoreDwmRendering(IntPtr hwnd)
-    {
-        uint cornerPref = 2; // Rounded corners
-        DwmSetWindowAttribute(hwnd, 33, ref cornerPref, sizeof(uint));
+   
 
-        uint ncRenderingEnabled = 2; // DWMNCRP_ENABLED
-        DwmSetWindowAttribute(hwnd, 2, ref ncRenderingEnabled, sizeof(uint));
-    }
+   
+  
 
-    struct ACCENT_POLICY
-    {
-        public ACCENT_STATE AccentState;
-        public int AccentFlags;
-        public int GradientColor;
-        public int AnimationId;
-    }
-
-    enum ACCENT_STATE
-    {
-        ACCENT_DISABLED = 0,
-        ACCENT_ENABLE_GRADIENT = 1,
-        ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,
-        ACCENT_ENABLE_BLURBEHIND = 3,
-        ACCENT_ENABLE_ACRYLICBLURBEHIND = 4,
-        ACCENT_ENABLE_HOSTBACKDROP = 5,
-        ACCENT_INVALID_STATE = 6
-    }
-
-    public static void EnableBlurUsingUser32(IntPtr hwnd)
-    {
-        // Make the window layered
-        int extendedStyle = GetWindowLong(hwnd, Win32Index.EXSTYLE);
-        SetWindowLong(hwnd, Win32Index.EXSTYLE, extendedStyle | 0x00080000); // WS_EX_LAYERED
-
-        // Set transparency (fully transparent)
-        SetLayeredWindowAttributes(hwnd, 0, 0, WindowLayeredOptions.COLORKEY);
-
-        // Apply the blur effect (DwmExtendFrameIntoClientArea)
-        MARGINS margins = new MARGINS { Left = -1, Right = -1, Top = -1, Bottom = -1 }; // Apply blur to all edges
-        DwmExtendFrameIntoClientArea(hwnd, ref margins);
-    }
-    public struct MARGINS
-    {
-        public int Left;
-        public int Right;
-        public int Top;
-        public int Bottom;
-    }
-
-    public static void ApplyBlurEffect(IntPtr hwnd)
-    {
-        MARGINS margins = new MARGINS { Left = -1, Right = -1, Top = -1, Bottom = -1 }; // Apply blur to all edges
-        DwmExtendFrameIntoClientArea(hwnd, ref margins);
-    }
+ 
 
     [DllImport(DllReferences.User32)]
 #pragma warning disable SYSLIB1054
     private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy,
 #pragma warning restore SYSLIB1054
         uint uFlags);
-
-
-
+    
 #pragma warning restore SYSLIB1054
 
     [DllImport(DllReferences.User32)]
@@ -146,11 +85,5 @@ internal class WindowAppearanceController
         DwmSetWindowAttribute(IntPtr hwnd, int dwAttribute, ref uint pvAttribute, int cbAttribute);
 
 
-    [DllImport(DllReferences.User32, SetLastError = true)]
-    static extern bool SetLayeredWindowAttributes(IntPtr hwnd, uint crKey, byte bAlpha, uint dwFlags);
-#pragma warning restore SYSLIB1054
-    [DllImport(DllReferences.User32)]
-    static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WINDOWCOMPOSITIONATTRIBDATA data);
-    [DllImport("dwmapi.dll", PreserveSig = false)]
-    public static extern void DwmExtendFrameIntoClientArea(IntPtr hwnd, ref MARGINS pMargins);
+  
 }

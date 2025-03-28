@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-25T20:48:15.232</Modified>
+      <Modified>2025-03-26T09:13:54.859</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-25T20:47:58.925</Modified>
+      <Modified>2025-03-26T09:13:35.591</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x86\Release\net8.0-windows10.0.19041.0\win-x86\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
@@ -43,7 +43,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-25T20:47:57.582</Modified>
+      <Modified>2025-03-26T09:13:34.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -139,99 +139,99 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\linked\System.ComponentModel.dll">
       <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2025-03-25T20:48:09.122</Modified>
+      <Modified>2025-03-26T09:13:48.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\linked\System.Drawing.dll">
       <PackagePath>System.Drawing.dll</PackagePath>
-      <Modified>2025-03-25T20:48:09.220</Modified>
+      <Modified>2025-03-26T09:13:48.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
-      <Modified>2025-03-25T20:48:11.316</Modified>
+      <Modified>2025-03-26T09:13:50.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\Microsoft.WinUI.dll">
       <PackagePath>Microsoft.WinUI.dll</PackagePath>
-      <Modified>2025-03-25T20:48:11.477</Modified>
+      <Modified>2025-03-26T09:13:50.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-25T20:48:11.587</Modified>
+      <Modified>2025-03-26T09:13:51.030</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
-      <Modified>2025-03-25T20:48:11.694</Modified>
+      <Modified>2025-03-26T09:13:51.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2025-03-25T20:48:11.800</Modified>
+      <Modified>2025-03-26T09:13:51.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2025-03-25T20:48:11.908</Modified>
+      <Modified>2025-03-26T09:13:51.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.ComponentModel.TypeConverter.dll">
       <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.000</Modified>
+      <Modified>2025-03-26T09:13:51.480</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Diagnostics.StackTrace.dll">
       <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.108</Modified>
+      <Modified>2025-03-26T09:13:51.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Drawing.Primitives.dll">
       <PackagePath>System.Drawing.Primitives.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.204</Modified>
+      <Modified>2025-03-26T09:13:51.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.319</Modified>
+      <Modified>2025-03-26T09:13:51.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.IO.MemoryMappedFiles.dll">
       <PackagePath>System.IO.MemoryMappedFiles.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.427</Modified>
+      <Modified>2025-03-26T09:13:51.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.533</Modified>
+      <Modified>2025-03-26T09:13:52.026</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.643</Modified>
+      <Modified>2025-03-26T09:13:52.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
-      <Modified>2025-03-25T20:48:12.750</Modified>
+      <Modified>2025-03-26T09:13:52.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Private.CoreLib.dll">
       <PackagePath>System.Private.CoreLib.dll</PackagePath>
-      <Modified>2025-03-25T20:48:14.070</Modified>
+      <Modified>2025-03-26T09:13:53.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2025-03-25T20:48:14.228</Modified>
+      <Modified>2025-03-26T09:13:53.803</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2025-03-25T20:48:14.378</Modified>
+      <Modified>2025-03-26T09:13:53.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2025-03-25T20:48:14.479</Modified>
+      <Modified>2025-03-26T09:13:54.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\System.Security.Cryptography.dll">
       <PackagePath>System.Security.Cryptography.dll</PackagePath>
-      <Modified>2025-03-25T20:48:14.590</Modified>
+      <Modified>2025-03-26T09:13:54.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
-      <Modified>2025-03-25T20:48:14.722</Modified>
+      <Modified>2025-03-26T09:13:54.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\R2R\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
-      <Modified>2025-03-25T20:48:15.083</Modified>
+      <Modified>2025-03-26T09:13:54.688</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x86\Release\net8.0-windows10.0.19041.0\win-x86\sysinfo.deps.json">
       <PackagePath>sysinfo.deps.json</PackagePath>
-      <Modified>2025-03-25T20:48:15.136</Modified>
+      <Modified>2025-03-26T09:13:54.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
       <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>

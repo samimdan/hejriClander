@@ -1,1 +1,1 @@
-C:\Users\USER\source\repos\samimdan\hejriClander\sysinfo\sysinfo.csproj;x64
+C:\Users\USER\source\repos\samimdan\hejriClander\sysinfo.csproj;x64

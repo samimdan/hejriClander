@@ -3,112 +3,104 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Numerics;
+using System.Threading.Tasks;
+using Microsoft.UI.Composition;
+using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Imaging;
+using WinRT;
 using WinRT.Interop;
 using Color = Windows.UI.Color;
-using Microsoft.UI.Composition.SystemBackdrops;
-using WinRT;
+
 #endregion
 
 namespace sysinfo;
 
 public sealed partial class MainWindow : Window
 {
-    private readonly BitmapImage _bitmapImage;
-    private readonly DispatcherTimer _dispatcherTimer = new();
+    
     private readonly DispatcherTimer _dateTime;
+    private readonly DispatcherTimer _dispatcherTimer = new();
     private Point _clickOffset;
-
     private bool _isDragging;
-    Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration m_configurationSource;
+
 
     /* ------------------------------- MainWindow Constructor ------------------------------- */
     public MainWindow()
-
     {
         InitializeComponent();
 
-        this.Activated += (e, s) =>
+        Activated += (e, s) =>
         {
-            MainWindow_Activated(e, s);
+            //MainWindow_Activated(e, s);
             ApplyAcrylicEffect();
         };
-        
-        ApplyAcrylicEffect();
-
+      
+       
+       var response = Task.Run(async () => await new GetDatafromApi().FetchDataContentAsync()).Result;
+        DayNumTb.Text = PersianTools.ConvertPersianToEnglish( response.DateText);
+        DayOfWeekTb.Text = response.DayText;
+        MonthTb.Text = response.MonthText;
+        var weatherResponse = Task.Run(async () => await new GetDatafromApi().GetWeatherDataAsync("Hamedan")).Result;
+        WeatherTb.Text = weatherResponse.Main.Temp.ToString("0.0") + "°C";
+        WeatherIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/weather/sun.png"));
+        Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
+        Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));
         var hwnd = WindowNative.GetWindowHandle(this);
-       WindowAppearanceController.SetWindowsSize(this, 230, 1000);
-       WindowAppearanceController.NakedWindow(hwnd);
+        WindowAppearanceController.SetWindowsSize(this, 230, 1000);
+        WindowAppearanceController.NakedWindow(hwnd);
         WindowAppearanceController.SetTopMost(this, true);
         WindowAppearanceController.SetCornerRadius(hwnd, WindowCornerPreference.ROUND);
-        
+
         _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
         _dispatcherTimer.Tick += MoveWindowWhileDragging;
 
-        _bitmapImage = new BitmapImage(FunnyGif.Morning);
-        //FunnyStateGif.ImageSource = _bitmapImage;
-        //ApplyBlur funnyGiftBlur = new(ImageShadowContainer, Color.FromArgb(128, 0, 0, 0), 35.0f, .2f,
-          //  new Vector3(0, 4, 0));
-        //WindowAppearanceController.RestoreDwmRendering(hwnd);
-        //funnyGiftBlur.AddDropShadow();
         _dateTime = new DispatcherTimer
         {
             Interval = TimeSpan.FromSeconds(1)
         };
-        _dateTime.Tick += (sender, e) => {
-           var hour = DateTime.Now.Hour % 12;
+        _dateTime.Tick += (sender, e) =>
+        {
+            var hour = DateTime.Now.Hour % 12;
             if (hour == 0) hour = 12;
 
             HourTb.Text = hour.ToString();
             MinuteTb.Text = DateTime.Now.Minute.ToString();
             SecondTb.Text = DateTime.Now.ToString("ss");
-            TtTb.Text = DateTime.Now.Hour >= 12 ? "PM" : "AM";
+            //TdIcon.Glyph = DateTime.Now.Hour <= 12 ? "\uE706" : "\uE708";
+          //  TdIcon.Foreground = DateTime.Now.Hour <= 12 ? sunBrush : moonBrush;
             SecondAnimation.Begin();
         };
         _dateTime.Start();
     }
-
+   
+   
     private void ApplyAcrylicEffect()
     {
         var desktopAcrylicBackdrop = new DesktopAcrylicBackdrop();
-        this.SystemBackdrop = desktopAcrylicBackdrop;
-        var acrylicController= new DesktopAcrylicController();
+        SystemBackdrop = desktopAcrylicBackdrop;
+        var acrylicController = new DesktopAcrylicController();
         acrylicController.Kind = DesktopAcrylicKind.Thin;
-        acrylicController.TintColor = Color.FromArgb(2, 0, 0, 0); // Black color
-        acrylicController.TintOpacity = 0.2f; // Set opacity
-        m_configurationSource = new Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration();
-        // Apply the controller to the backdrop
-        acrylicController.AddSystemBackdropTarget(this.As<Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop>());
-        acrylicController.SetSystemBackdropConfiguration(m_configurationSource);
-    }
+        acrylicController.TintColor = Color.FromArgb(1, 0, 0, 0); // Black color
+        acrylicController.TintOpacity = 0f;
+        acrylicController.LuminosityOpacity = 0.2f;
+        //fall back color to transparent
+        acrylicController.FallbackColor = Color.FromArgb(0, 0, 0, 0);
 
-    private void MainWindow_Activated(object sender, WindowActivatedEventArgs e)
-    {
-        if (e.WindowActivationState == WindowActivationState.Deactivated)
-        {
-            // Do nothing when the window is deactivated
-            Debug.WriteLine("deactive");
-        }
-        
-        else
-        {
-            // Apply the effect when the window gains focus (active)
-            Window.Current.Activate();
-            ApplyAcrylicEffect();
-            Debug.WriteLine("other active");
-        }
+        // Set opacity
+        var configurationSource = new SystemBackdropConfiguration();
+        // Apply the controller to the backdrop
+        acrylicController.AddSystemBackdropTarget(this.As<ICompositionSupportsSystemBackdrop>());
+        acrylicController.SetSystemBackdropConfiguration(configurationSource);
     }
 
 
     public void HandleGridPointerPressed(object sender, PointerRoutedEventArgs e)
     {
         _isDragging = true;
-        _bitmapImage.UriSource = FunnyGif.SusageSit;
+       
         var positionInElement = e.GetCurrentPoint((UIElement)sender).Position;
         _clickOffset = new Point((int)positionInElement.X, (int)positionInElement.Y);
         _dispatcherTimer.Start();
@@ -125,7 +117,7 @@ public sealed partial class MainWindow : Window
     public void HandleGridPointerRelased(object sender, PointerRoutedEventArgs e)
     {
         _isDragging = false;
-        _bitmapImage.UriSource = FunnyGif.GetRandomGif();
+        
         _dispatcherTimer.Stop();
     }
 }

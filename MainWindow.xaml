@@ -28,14 +28,15 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>  
+                   
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" x:Name="HourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin"  FontSize="80"  />
-                    <StackPanel Grid.Row="1"  Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
-                        <TextBlock x:Name="MinuteTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right"  FontSize="45" FontWeight="400" />
-                        <TextBlock x:Name="SecondTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Right" FontSize="35"  FontWeight="400" Opacity="1"  />
-                    </StackPanel>
-                    <TextBlock x:Name="TtTb" Grid.Row="2"   FontSize="25"  FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Center" Padding="0 10 0 0 "/>
+                    
+                        <TextBlock Grid.Row="1" x:Name="MinuteTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Center"  FontSize="45" FontWeight="400" />
+                        <TextBlock Grid.Row="2" x:Name="SecondTb"  VerticalAlignment="Bottom" FontFamily="/Assets/Fonts/BigShouldersStencil.ttf#Big Shoulders Stencil Thin" HorizontalAlignment="Center" FontSize="35"  FontWeight="400" Opacity="1"  />
+                    
+
                     <Grid.Resources>
                         <Storyboard x:Name="SecondAnimation">
                             <DoubleAnimation 
@@ -48,15 +49,19 @@
                     </Grid.Resources>
                 </Grid>
             </Grid>
-            <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" >
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" /> 
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="3*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" x:Name="DayTb" Text="4" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto"  FontSize="80"  />
-                <TextBlock Grid.Row="1" x:Name="DateTb"  Text="فروردین" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="15"  />
-                <TextBlock Grid.Row="2" x:Name="MonthTb" Text="دوشنبه" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="15"  />
+                <Image Grid.Row="0" x:Name="WeatherIcon"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="128" Height="128" Stretch="Uniform" Margin="2"/>
+                <TextBlock Grid.Row="1" x:Name="WeatherTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="12"  />
+                <TextBlock Grid.Row="2" x:Name="DayNumTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto"  FontSize="80"  />
+                <TextBlock Grid.Row="3" x:Name="DayOfWeekTb"   VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="15"  />
+                <TextBlock Grid.Row="4" x:Name="MonthTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="900" FontFamily="/Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX"  FontSize="15"  />
 
             </Grid>
 

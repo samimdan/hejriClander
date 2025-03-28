@@ -1,0 +1,109 @@
+{
+  "weather_conditions": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "image": "sun.png",
+      "time_of_day": "AM"
+    },
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "image": "few_clouds.png",
+      "time_of_day": "AM"
+    },
+    {
+      "id": 802,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "image": "scattered_clouds.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 803,
+      "main": "Clouds",
+      "description": "broken clouds",
+      "image": "broken_clouds.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "image": "overcast_clouds.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "image": "light_rain.png",
+      "time_of_day": "AM"
+    },
+    {
+      "id": 501,
+      "main": "Rain",
+      "description": "moderate rain",
+      "image": "moderate_rain.png",
+      "time_of_day": "AM"
+    },
+    {
+      "id": 502,
+      "main": "Rain",
+      "description": "heavy rain",
+      "image": "heavy_rain.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 511,
+      "main": "Rain",
+      "description": "freezing rain",
+      "image": "freezing_rain.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 200,
+      "main": "Thunderstorm",
+      "description": "thunderstorm with light rain",
+      "image": "thunderstorm_light_rain.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 600,
+      "main": "Snow",
+      "description": "light snow",
+      "image": "light_snow.png",
+      "time_of_day": "AM"
+    },
+    {
+      "id": 601,
+      "main": "Snow",
+      "description": "snow",
+      "image": "snow.png",
+      "time_of_day": "AM"
+    },
+    {
+      "id": 701,
+      "main": "Mist",
+      "description": "mist",
+      "image": "mist.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 741,
+      "main": "Fog",
+      "description": "fog",
+      "image": "fog.png",
+      "time_of_day": "PM"
+    },
+    {
+      "id": 761,
+      "main": "Ash",
+      "description": "ash",
+      "image": "ash.png",
+      "time_of_day": "PM"
+    }
+  ]
+}
