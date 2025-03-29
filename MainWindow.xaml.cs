@@ -45,7 +45,9 @@ public sealed partial class MainWindow : Window
         MonthTb.Text = response.MonthText;
         var weatherResponse = Task.Run(async () => await new GetDatafromApi().GetWeatherDataAsync("Hamedan")).Result;
         WeatherTb.Text = weatherResponse.Main.Temp.ToString("0.0") + "°C";
+        Debug.WriteLine(weatherResponse.Weather[0].Description);
         WeatherIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/weather/sun.png"));
+        var myweather =new WeatherStates();
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
         Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));
         var hwnd = WindowNative.GetWindowHandle(this);
