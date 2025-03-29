@@ -54,7 +54,7 @@ namespace sysinfo
             }
         }
 
-        public async Task<WeatherResponse> GetWeatherDataAsync(string cityName)
+        public async Task<Weather> GetWeatherDataAsync(string cityName)
         {
             const string apiKey = "eb56f50ab7a5ef07ba1e5165eeef8da7"; // Replace with your API key
             const string baseUrl = "https://api.openweathermap.org/data/2.5/weather";
@@ -66,7 +66,7 @@ namespace sysinfo
                 if (response.IsSuccessStatusCode)
                 {
                     string json = await response.Content.ReadAsStringAsync();
-                    var weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(json);
+                    var weatherResponse = JsonConvert.DeserializeObject<Weather>(json);
                     return weatherResponse;
                 }
                 else
