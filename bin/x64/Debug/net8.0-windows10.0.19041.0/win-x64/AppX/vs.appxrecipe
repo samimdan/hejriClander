@@ -29,49 +29,25 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2025-03-29T06:17:05.184</Modified>
-=======
-<<<<<<< HEAD
-      <Modified>2025-03-30T20:41:18.427</Modified>
-=======
-      <Modified>2025-03-29T06:17:05.184</Modified>
->>>>>>> main
->>>>>>> parent of d65b2f1 (almost done 🥳🥳🥳🥳)
+      <Modified>2025-03-31T18:40:57.975</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-28T18:38:03.625</Modified>
+      <Modified>2025-03-31T17:10:03.051</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-28T16:49:57.281</Modified>
+      <Modified>2025-03-31T17:10:02.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-<<<<<<< HEAD
-      <Modified>2025-03-29T06:17:04.869</Modified>
+      <Modified>2025-03-31T18:40:57.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-29T06:17:04.876</Modified>
-=======
-<<<<<<< HEAD
-      <Modified>2025-03-30T20:41:17.799</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
-      <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-30T20:41:17.813</Modified>
-=======
-      <Modified>2025-03-29T06:17:04.869</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
-      <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-29T06:17:04.876</Modified>
->>>>>>> main
->>>>>>> parent of d65b2f1 (almost done 🥳🥳🥳🥳)
+      <Modified>2025-03-31T18:40:57.595</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -947,7 +923,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.deps.json">
       <PackagePath>sysinfo.deps.json</PackagePath>
-      <Modified>2025-03-28T18:34:10.785</Modified>
+      <Modified>2025-03-31T17:10:02.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
       <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>

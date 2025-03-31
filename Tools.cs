@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sysinfo
 {
-    internal class PersianTools
+    internal class Tools
     {
         public static string ConvertPersianToEnglish(string input)
         {
@@ -22,6 +22,11 @@ namespace sysinfo
 
             return input;
         }
+        public static int MileToKm(double mile)
+        {
+            return (int)(mile * 1.60934);
+        }
     }
+
 }
 

@@ -1,192 +1,155 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-using HtmlAgilityPack;
+﻿#region
+
+using System;
 using System.Diagnostics;
-using Microsoft.UI.Xaml;
+using System.Dynamic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
+#endregion
 
-namespace sysinfo
+namespace sysinfo;
+
+internal class GetDatafromApi
 {
-    internal class GetDatafromApi
+    public async Task<DateInfo> FetchDataContentAsync()
     {
-        public async Task<DateInfo> FetchDataContentAsync()
+        const string url = "https://www.bahesab.ir/time/hamedan/";
+        try
         {
-<<<<<<< HEAD
-            const string url = "https://www.bahesab.ir/time/hamedan/";
-            try
-=======
-            HttpClient httpClient = new HttpClient();
-            string html = await httpClient.GetStringAsync(url);
-            Doc = new HtmlDocument();
-            Doc.LoadHtml(html);
-            HtmlNode node = Doc.DocumentNode.SelectSingleNode("//span[@id='date']");
+            var httpClient = new HttpClient();
+            var html = await httpClient.GetStringAsync(url);
+            var doc = new HtmlDocument();
+            doc.LoadHtml(html);
+            var node = doc.DocumentNode.SelectSingleNode("//span[@id='date']");
             if (node == null)
                 throw new Exception("Failed to get date.");
-            string todayNum = node.SelectSingleNode(".//span").InnerText;
+            var todayNum = node.SelectSingleNode(".//span").InnerText;
             if (todayNum == null) throw new Exception("Failed to get today.");
-            string month = node.InnerHtml.Split("</span>")[1].Split("<br>")[0];
+            var month = node.InnerHtml.Split("</span>")[1].Split("<br>")[0];
 
             Debug.WriteLine(month);
             if (month == null) throw new Exception("Failed to get month.");
-            string todayText = node.InnerHtml.Split("<span>")[0].Split(" ")[1];
-            string morningHolyTime = Doc.DocumentNode.SelectSingleNode("//div[@class='timer']").ChildNodes[0].InnerText.Split("--")[0];
-            string noonHolyTime = Doc.DocumentNode.SelectSingleNode("//span[@id='azan-time3']").InnerText;
-            string afternoonHolyTime = Doc.DocumentNode.SelectSingleNode("//span[@id='azan-time5']").InnerText;
-            
-            DateInfo dateInfo = new DateInfo
->>>>>>> parent of d65b2f1 (almost done 🥳🥳🥳🥳)
+            var todayText = node.InnerHtml.Split("<span>")[0].Split(" ")[1];
+            var morningHolyTime = doc.DocumentNode.SelectSingleNode("//div[@class='timer']").ChildNodes[0].InnerText
+                .Split("--")[0];
+            var noonHolyTime = doc.DocumentNode.SelectSingleNode("//span[@id='azan-time3']").InnerText;
+            var afternoonHolyTime = doc.DocumentNode.SelectSingleNode("//span[@id='azan-time5']").InnerText;
+
+
+            Debug.WriteLine(month);
+            if (month == null) throw new Exception("Failed to get month.");
+
+
+            var dateInfo = new DateInfo
             {
-                var httpClient = new HttpClient();
-                var html = await httpClient.GetStringAsync(url);
-                var doc = new HtmlDocument();
-                doc.LoadHtml(html);
-                var node = doc.DocumentNode.SelectSingleNode("//span[@id='date']");
-                if (node == null)
-                    throw new Exception("Failed to get date.");
-                var todayNum = node.SelectSingleNode(".//span").InnerText;
-                if (todayNum == null) throw new Exception("Failed to get today.");
-                var month = node.InnerHtml.Split("</span>")[1].Split("<br>")[0];
-
-<<<<<<< HEAD
-                Debug.WriteLine(month);
-                if (month == null) throw new Exception("Failed to get month.");
-                var todayText = node.InnerHtml.Split("<span>")[0].Split(" ")[1];
-
-                var dateInfo = new DateInfo
+                DateText = todayNum,
+                MonthText = month,
+                DayText = todayText,
+                morningHollyTime = new MorningHollyTime
                 {
-                    DateText = todayNum,
-                    MonthText = month,
-                    DayText = todayText
-=======
+                    Hour = int.Parse(Tools.ConvertPersianToEnglish(morningHolyTime.Split(":")[0])),
+                    Minute = int.Parse(Tools.ConvertPersianToEnglish(morningHolyTime.Split(":")[1]))
                 },
-                Noon = new Noon
+                eveningHollyTime = new EveningHollyTime
                 {
-                    Hour = int.Parse(Tools.ConvertPersianToEnglish( noonHolyTime.Split(":")[0])),
-                    Minute = int.Parse(Tools.ConvertPersianToEnglish(noonHolyTime.Split(":")[1])),
+                    Hour = int.Parse(Tools.ConvertPersianToEnglish(noonHolyTime.Split(":")[0])),
+                    Minute = int.Parse(Tools.ConvertPersianToEnglish(noonHolyTime.Split(":")[1]))
                 },
-                AfterNoon = new AfterNoon
+                afternoonHollyTime = new AfternoonHollyTime
                 {
                     Hour = int.Parse(Tools.ConvertPersianToEnglish(afternoonHolyTime.Split(":")[0])),
-                    Minute = int.Parse(Tools.ConvertPersianToEnglish(afternoonHolyTime.Split(":")[1])),
+                    Minute = int.Parse(Tools.ConvertPersianToEnglish(afternoonHolyTime.Split(":")[1]))
                 }
-
             };
             return dateInfo;
         }
-<<<<<<< HEAD
-        catch (Exception e)
-=======
 
-        public async Task<Weather> GetWeatherDataAsync(string cityName)
->>>>>>> main
+        catch
         {
-            ErrorHandeling.ShowError(e.Message, "Error");
             return new DateInfo
-            {
-                DateText = "00",
-                MonthText = "00",
-                DayText = "00",
-                Morning = new Morning
-                {
-                    Hour = 0,
-                    Minute = 0,
-                },
-                Noon = new Noon
-                {
-                    Hour = 0,
-                    Minute = 0,
-                },
-                AfterNoon = new AfterNoon
-                {
-                    Hour = 0,
-                    Minute = 0,
-                }
-
-<<<<<<< HEAD
-            };
-=======
-                var response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    string json = await response.Content.ReadAsStringAsync();
-                    var weatherResponse = JsonConvert.DeserializeObject<Weather>(json);
-                    return weatherResponse;
-                }
-                else
-                {
-                    // Handle error if necessary
-                    return null;
-                }
-            }
->>>>>>> main
-        }
-    }
-
-    public static async Task<Weather> GetWeatherDataAsync(string cityName)
-    {
-        const string apiKey = "eb56f50ab7a5ef07ba1e5165eeef8da7";
-        const string baseUrl = "https://api.openweathermap.org/data/2.5/weather";
-
-        using HttpClient client = new HttpClient();
-        try
-        {
-            var url = $"{baseUrl}?q={cityName}&units=metric&appid={apiKey}";
-            Debug.WriteLine(url);
-            var response = await client.GetAsync(url);
-            if (!response.IsSuccessStatusCode)
-                return new Weather
-                {
-                    CurrentSunPosition = SunPosition.NA,
-                    CurrentDescription = "NA",
-                    Id = 0,
-                    Temp = 0,
-                    Wind = 0,
-                    Humidity = 0,
-                   
->>>>>>> parent of d65b2f1 (almost done 🥳🥳🥳🥳)
-                };
-                return dateInfo;
-            }
-            catch (Exception e)
-            {
-                ErrorHandeling.ShowError(e.Message, "Error");
-                return new DateInfo
                 {
                     DateText = "00",
                     MonthText = "00",
-                    DayText = "00"
-                };
-            }
-        }
-
-        public async Task<Weather> GetWeatherDataAsync(string cityName)
-        {
-            const string apiKey = "eb56f50ab7a5ef07ba1e5165eeef8da7"; // Replace with your API key
-            const string baseUrl = "https://api.openweathermap.org/data/2.5/weather";
-            using (HttpClient client = new HttpClient())
-            {
-                string url = $"{baseUrl}?q={cityName}&units=metric&appid={apiKey}";
-
-                var response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    string json = await response.Content.ReadAsStringAsync();
-                    var weatherResponse = JsonConvert.DeserializeObject<Weather>(json);
-                    return weatherResponse;
+                    DayText = "00",
+                    morningHollyTime = new MorningHollyTime
+                    {
+                        Hour = 0,
+                        Minute = 0
+                    },
+                    eveningHollyTime = new EveningHollyTime
+                    {
+                        Hour = 0,
+                        Minute = 0
+                    },
+                    afternoonHollyTime = new AfternoonHollyTime
+                    {
+                        Hour = 0,
+                        Minute = 0
+                    }
                 }
-                else
-                {
-                    // Handle error if necessary
-                    return null;
-                }
-            }
+                ;
         }
     }
 
-                }
 
+    public static async Task<OpenWeatherResponse> GetWeatherDataAsync(string cityName)
+    {
+        const string apiKey = "eb56f50ab7a5ef07ba1e5165eeef8da7"; // Replace with your API key
+        const string baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+        using var client = new HttpClient();
+        var url = $"{baseUrl}?q={cityName}&units=metric&appid={apiKey}";
+        var weatherResponse = new OpenWeatherResponse();
+        try
+        {
+            var response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                var deserializedWeather = JsonConvert.DeserializeObject<OpenWeatherResponse>(json);
+
+                weatherResponse = deserializedWeather ?? throw new Exception("Failed to get weather.");
+            }
+        }
+        catch (Exception ex)
+        {
+            return new OpenWeatherResponse
+            {
+                Id = 0,
+                Main = new Main(), // Initialize Main object properly
+
+                Wind = new Wind()
+            };
+        }
+
+        const string uVApiKey = "S8VLXMD9R3FE7FRCHFQN396RU"; // Replace with your API key
+        var uVUrl =
+            $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{cityName}?unitGroup=us&key={uVApiKey}&contentType=json";
+
+        using var uVClient = new HttpClient();
+        try
+        {
+            var response = await client.GetAsync(uVUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                dynamic? uVObject = JsonConvert.DeserializeObject<ExpandoObject>(json, new ExpandoObjectConverter());
+                var uVIndexNode = uVObject?.days?[0]?.uvindex;
+
+                if (uVIndexNode != null)
+                {
+                    //
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching UV index: {ex.Message}");
+        }
+
+        return weatherResponse;
+    }
+}
