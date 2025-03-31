@@ -1,7 +1,6 @@
 ﻿#region
 
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Threading.Tasks;
 using Microsoft.UI.Composition;
@@ -37,6 +36,30 @@ public sealed partial class MainWindow : Window
             //MainWindow_Activated(e, s);
             ApplyAcrylicEffect();
         };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        WeatherMetrics weatherMetrics = new();
+        var amPm = DateTime.Now.Hour < 12 ? SunPosition.AM : SunPosition.PM;
+        GetDatafromApi getDatafromApi = new();
+        var dateRespone = Task.Run(async () => await getDatafromApi.FetchDataContentAsync()).Result;
+        TodayChDateTb.Text = ChrisitianDate.ChDay.ToString();
+        MonthChDateTb.Text = ChrisitianDate.ChMonth.ToString();
+        MonthChDateTextTb.Text = ChrisitianDate.ChMonthName;
+        DayNumTb.Text = Tools.ConvertPersianToEnglish(dateRespone.DateText);
+        DayOfWeekTb.Text = dateRespone.DayText;
+        MonthTb.Text = dateRespone.MonthText;
+        var weatherResponse = Task.Run(async () => await GetDatafromApi.GetWeatherDataAsync("Hamedan")).Result;
+        //WeatherTb.Text = weatherResponse.Temp.ToString("0.0") + "°C";
+        Weatherlist.SetForcastList();
+        var weatherIconPath = Weatherlist.WeatherIcon(weatherResponse.CurrentDescription, amPm);
+        WeatherIcon.Source = new BitmapImage(new Uri(weatherIconPath));
+        WeatherTempTb.Text = weatherResponse.Temp.ToString("0.0") + "°C";
+        WeatherWindTb.Text = Math.Round(weatherMetrics.MileToKm(weatherResponse.Wind), 2)
+            .ToString(CultureInfo.InvariantCulture);
+        WeatherHumidityTb.Text = weatherResponse.Humidity.ToString(CultureInfo.InvariantCulture);
+=======
+>>>>>>> parent of d65b2f1 (almost done 🥳🥳🥳🥳)
       
        
        var response = Task.Run(async () => await new GetDatafromApi().FetchDataContentAsync()).Result;
@@ -44,12 +67,22 @@ public sealed partial class MainWindow : Window
         DayOfWeekTb.Text = response.DayText;
         MonthTb.Text = response.MonthText;
         var weatherResponse = Task.Run(async () => await new GetDatafromApi().GetWeatherDataAsync("Hamedan")).Result;
+<<<<<<< HEAD
         WeatherTb.Text = weatherResponse.MainTemp.ToString("0.0") + "°C";
     
       
         var myweather =new WeatherStates();
         var weather = myweather.WeatherCollection.Find(w => w.Description == weatherResponse.Description);
         Debug.WriteLine(weather.Image);
+=======
+        WeatherTb.Text = weatherResponse.Main.Temp.ToString("0.0") + "°C";
+    
+        WeatherIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/weather/sun.png"));
+        var myweather =new WeatherStates();
+        var weather = myweather.WeatherCollection.Find(w => w.Description == weatherResponse.Weather[0].Description);
+        Debug.WriteLine(weather.Image);
+>>>>>>> main
+>>>>>>> parent of d65b2f1 (almost done 🥳🥳🥳🥳)
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
         Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));
         var hwnd = WindowNative.GetWindowHandle(this);

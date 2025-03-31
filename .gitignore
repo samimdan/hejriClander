@@ -30,4 +30,9 @@
 .vs/sysinfo/v17/DocumentLayout.json
 .vs/sysinfo/FileContentIndex/7f5bef08-dda6-4b6d-a1ec-f59da2cdaa94.vsidx
 .vs/sysinfo/FileContentIndex/8db96340-e95f-4d0c-a350-57091867fefd.vsidx
+.vs/obj/ 
+ bin/ 
+ *.pdb 
 .vs/
+*.suo
+.vs/ 
