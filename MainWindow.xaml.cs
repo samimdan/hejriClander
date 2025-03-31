@@ -44,11 +44,11 @@ public sealed partial class MainWindow : Window
         DayOfWeekTb.Text = response.DayText;
         MonthTb.Text = response.MonthText;
         var weatherResponse = Task.Run(async () => await new GetDatafromApi().GetWeatherDataAsync("Hamedan")).Result;
-        WeatherTb.Text = weatherResponse.Main.Temp.ToString("0.0") + "°C";
+        WeatherTb.Text = weatherResponse.MainTemp.ToString("0.0") + "°C";
     
-        WeatherIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/weather/sun.png"));
+      
         var myweather =new WeatherStates();
-        var weather = myweather.WeatherCollection.Find(w => w.Description == weatherResponse.Weather[0].Description);
+        var weather = myweather.WeatherCollection.Find(w => w.Description == weatherResponse.Description);
         Debug.WriteLine(weather.Image);
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
         Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));
