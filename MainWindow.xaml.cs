@@ -50,7 +50,7 @@ public sealed partial class MainWindow : Window
         DayOfWeekTb.Text = dateRespone.DayText;
         MonthTb.Text = dateRespone.MonthText;
         OpenWeatherResponse weatherResponse = Task.Run(async () => await GetDatafromApi.GetWeatherDataAsync("Hamedan")).Result;
-        //WeatherTb.Text = weatherResponse.Temp.ToString("0.0") + "°C";
+        if (weatherResponse.Main.Temp != null) WeatherTb.Text = weatherResponse.Main.Temp?.ToString("0.0") + "°C";
         WeatherStates.WeatherStatesFill();
        
 
@@ -70,8 +70,8 @@ public sealed partial class MainWindow : Window
     
         
        
-       // var weather = WeatherStates.WeatherCollection.Find(w => w.Description == weatherResponse.Weather[0].Description);
-        
+       WeatherSample fillterdWeatherSamples= WeatherStates.GetWeatherSample(weatherResponse.Weather[0].Description,amPm);
+        WeatherIcon.Source = new BitmapImage(new Uri(fillterdWeatherSamples.Image));
 
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
         Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));

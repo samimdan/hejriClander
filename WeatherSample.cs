@@ -36,10 +36,10 @@ namespace sysinfo
       WeatherCollection.Add(new WeatherSample { Id = 8001, ShortDescription = "Clear", Description = "clear sky", Image = "ms-appx:///Assets/weather/moon.png", Day = DayStatus.PM });
       WeatherCollection.Add(new WeatherSample { Id = 801, ShortDescription = "Clouds", Description = "few clouds", Image = "ms-appx:///Assets/weather/sun.png", Day = DayStatus.AM });
       WeatherCollection.Add(new WeatherSample { Id = 8011, ShortDescription = "Clouds", Description = "few clouds", Image = "ms-appx:///Assets/weather/moon.png", Day = DayStatus.PM });
-      WeatherCollection.Add(new WeatherSample { Id = 802, ShortDescription = "Clouds", Description = "scattered clouds", Image = "ms-appx:///Assets/weather/sun.png", Day = DayStatus.AM });
-      WeatherCollection.Add(new WeatherSample { Id = 8022, ShortDescription = "Clouds", Description = "scattered clouds", Image = "ms-appx:///Assets/weather/moon.png", Day = DayStatus.PM });
-      WeatherCollection.Add(new WeatherSample { Id = 803, ShortDescription = "Clouds", Description = "broken clouds", Image = "ms-appx:///Assets/weather/moon.png", Day = DayStatus.PM });
-      WeatherCollection.Add(new WeatherSample { Id = 8033, ShortDescription = "Clouds", Description = "broken clouds", Image = "ms-appx:///Assets/weather/sun.png", Day = DayStatus.AM });
+      WeatherCollection.Add(new WeatherSample { Id = 802, ShortDescription = "Clouds", Description = "scattered clouds", Image = "ms-appx:///Assets/weather/sun_clouds.ong", Day = DayStatus.AM });
+      WeatherCollection.Add(new WeatherSample { Id = 8022, ShortDescription = "Clouds", Description = "scattered clouds", Image = "ms-appx:///Assets/weather/moon_clouds.png", Day = DayStatus.PM });
+      WeatherCollection.Add(new WeatherSample { Id = 803, ShortDescription = "Clouds", Description = "broken clouds", Image = "ms-appx:///Assets/weather/moon_clouds.png", Day = DayStatus.PM });
+      WeatherCollection.Add(new WeatherSample { Id = 8033, ShortDescription = "Clouds", Description = "broken clouds", Image = "ms-appx:///Assets/weather/sun_clouds", Day = DayStatus.AM });
       WeatherCollection.Add(new WeatherSample { Id = 804, ShortDescription = "Clouds", Description = "overcast clouds", Image = "ms-appx:///Assets/weather/sun_clouds.png", Day = DayStatus.AM });
       WeatherCollection.Add(new WeatherSample { Id = 8044, ShortDescription = "Clouds", Description = "overcast clouds", Image = "ms-appx:///Assets/weather/moon_clouds.png", Day = DayStatus.PM });
       WeatherCollection.Add(new WeatherSample { Id = 500, ShortDescription = "Rain", Description = "light rain", Image = "ms-appx:///Assets/weather/NA_rain.png", Day = DayStatus.NA });
@@ -53,6 +53,26 @@ namespace sysinfo
       WeatherCollection.Add(new WeatherSample { Id = 741, ShortDescription = "Fog", Description = "fog", Image = "ms-appx:///Assets/weather/fog.png", Day = DayStatus.NA });
       WeatherCollection.Add(new WeatherSample { Id = 761, ShortDescription = "Ash", Description = "ash", Image = "ms-appx:///Assets/weather/ash.png", Day = DayStatus.NA });
     }
+    public static WeatherSample GetWeatherSample(string description, string dayStatus)
+    {
+      List<WeatherSample> filteredWeatherSamples = WeatherCollection.FindAll(x => x.Description == description);
+      return filteredWeatherSamples.Count switch
+      {
+        0 => new WeatherSample
+        {
+          Id = 0,
+          ShortDescription = "NA",
+          Description = "Not Available",
+          Image = "ms-appx:///Assets/weather/NA.png",
+          Day = DayStatus.NA
+        },
+        1 => filteredWeatherSamples[0],
+        _ => dayStatus == DayStatus.AM
+          ? filteredWeatherSamples.Find(x => x.Day == DayStatus.AM)
+          : filteredWeatherSamples.Find(x => x.Day == DayStatus.PM)
+      };
+    }
+    
   }
   public class Coord
   {
