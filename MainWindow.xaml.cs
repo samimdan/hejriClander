@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Threading.Tasks;
 using Microsoft.UI.Composition;
 using Microsoft.UI.Composition.SystemBackdrops;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
@@ -26,10 +27,10 @@ public sealed partial class MainWindow : Window
     private readonly DispatcherTimer _dispatcherTimer = new();
     private Point _clickOffset;
     private bool _isDragging;
-
+    private DispatcherQueue _dispatcherQueue;
 
     /* ------------------------------- MainWindow Constructor ------------------------------- */
-    public MainWindow()
+    public  MainWindow()
     {
         InitializeComponent();
 
@@ -38,41 +39,41 @@ public sealed partial class MainWindow : Window
             //MainWindow_Activated(e, s);
             ApplyAcrylicEffect();
         };
-
-        
+        PopulateWeatherInfo();
+        PopulateDateInfo();
+        _dispatcherQueue = DispatcherQueue.GetForCurrentThread();
+        GetDatafromApi.GetHollyTimesAsync();
         var amPm = DateTime.Now.Hour < 12 ? SunPosition.AM : SunPosition.PM;
-        GetDatafromApi getDatafromApi = new();
-        var dateRespone = Task.Run(async () => await getDatafromApi.FetchDataContentAsync()).Result;
-        //TodayChDateTb.Text = ChrisitianDate.ChDay.ToString();
-        //MonthChDateTb.Text = ChrisitianDate.ChMonth.ToString();
-        //MonthChDateTextTb.Text = ChrisitianDate.ChMonthName;
-        DayNumTb.Text = Tools.ConvertPersianToEnglish(dateRespone.DateText);
-        DayOfWeekTb.Text = dateRespone.DayText;
-        MonthTb.Text = dateRespone.MonthText;
+       
+        //var dateRespone = Task.Run(async () => await GetDatafromApi.FetchDataContentAsync()).Result;
+        ////TodayChDateTb.Text = ChrisitianDate.ChDay.ToString();
+        ////MonthChDateTb.Text = ChrisitianDate.ChMonth.ToString();
+        ////MonthChDateTextTb.Text = ChrisitianDate.ChMonthName;
+        //DayNumTb.Text = Tools.ConvertPersianToEnglish(dateRespone.DateText);
+        //DayOfWeekTb.Text = dateRespone.DayText;
+        //MonthTb.Text = dateRespone.MonthText;
         OpenWeatherResponse weatherResponse = Task.Run(async () => await GetDatafromApi.GetWeatherDataAsync("Hamedan")).Result;
-        if (weatherResponse.Main.Temp != null) WeatherTb.Text = weatherResponse.Main.Temp?.ToString("0.0") + "°C";
+       // if (weatherResponse.Main.Temp != null) WeatherTb.Text = weatherResponse.Main.Temp?.ToString("0.0") + "°C";
         WeatherStates.WeatherStatesFill();
        
 
-       
-       var response = Task.Run(async () => await new GetDatafromApi().FetchDataContentAsync()).Result;
+        var response = Task.Run(async () => await GetDatafromApi.FetchDataContentAsync()).Result;
         DayNumTb.Text = Tools.ConvertPersianToEnglish( response.DateText);
         DayOfWeekTb.Text = response.DayText;
         MonthTb.Text = response.MonthText;
-      
 
 
-    
-      
-       
 
-       // WeatherTb.Text = weatherResponse.Main.Temp.ToString("0.0") + "°C";
-    
         
-       
-       WeatherSample fillterdWeatherSamples= WeatherStates.GetWeatherSample(weatherResponse.Weather[0].Description,amPm);
-        WeatherIcon.Source = new BitmapImage(new Uri(fillterdWeatherSamples.Image));
 
+
+
+
+
+
+           WeatherSample fillterdWeatherSamples= WeatherStates.GetWeatherSample(weatherResponse.Weather[0].Description,amPm);
+        WeatherIcon.Source = new BitmapImage(new Uri(fillterdWeatherSamples.Image));
+        int uvinedx = Task.Run(async () => await GetDatafromApi.GetUvIndex("Hamadan")).Result;
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
         Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));
         var hwnd = WindowNative.GetWindowHandle(this);
@@ -102,8 +103,8 @@ public sealed partial class MainWindow : Window
         };
         _dateTime.Start();
     }
-   
-   
+
+
     private void ApplyAcrylicEffect()
     {
         var desktopAcrylicBackdrop = new DesktopAcrylicBackdrop();
@@ -147,4 +148,6 @@ public sealed partial class MainWindow : Window
         
         _dispatcherTimer.Stop();
     }
+
+ 
 }

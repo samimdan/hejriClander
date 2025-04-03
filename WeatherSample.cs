@@ -161,7 +161,7 @@ namespace sysinfo
   public class OpenWeatherResponse
   {
     [JsonProperty("coord")]
-    public Coord Coord { get; set; } = new Coord();
+    public Coord Coord { get; set; } 
 
     [JsonProperty("weather")]
     public List<Weather> Weather { get; set; } = new List<Weather>();
@@ -200,4 +200,11 @@ namespace sysinfo
     public int? Cod { get; set; } = 0;
   }
 
+public class WeatherExtraInfromation
+{
+  public int UvIndex;
+  public string? WeatherInformation;
+
+
+}
 }

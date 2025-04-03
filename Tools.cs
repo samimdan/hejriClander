@@ -22,10 +22,23 @@ namespace sysinfo
 
             return input;
         }
-        public static int MileToKm(double mile)
+        public static double MileToKm(double mile)
         {
-            return (int)(mile * 1.60934);
+            return (mile * 1.60934);
         }
+        //conver 24 hour to 12 hour return int 
+        public static int Convert24To12(int hour)
+        {
+            return hour switch
+            {
+                0 => 12,
+                > 12 => hour - 12,
+                _ => hour
+            };
+        }
+     
+      
+
     }
 
 }

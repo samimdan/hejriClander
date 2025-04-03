@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-31T19:56:38.991</Modified>
+      <Modified>2025-04-03T16:42:25.970</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-31T17:10:03.051</Modified>
+      <Modified>2025-04-03T16:27:56.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-31T17:10:02.731</Modified>
+      <Modified>2025-04-02T19:31:38.689</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-03-31T19:56:38.577</Modified>
+      <Modified>2025-04-03T16:42:25.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-03-31T19:56:38.588</Modified>
+      <Modified>2025-04-03T16:42:25.559</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -923,7 +923,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.deps.json">
       <PackagePath>sysinfo.deps.json</PackagePath>
-      <Modified>2025-03-31T17:10:02.543</Modified>
+      <Modified>2025-04-02T19:31:38.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\BigShouldersStencil.ttf">
       <PackagePath>Assets\Fonts\BigShouldersStencil.ttf</PackagePath>

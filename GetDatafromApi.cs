@@ -4,10 +4,12 @@ using System;
 using System.Diagnostics;
 using System.Dynamic;
 using System.Net.Http;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Windows.Media.Protection.PlayReady;
 
 #endregion
 
@@ -15,86 +17,92 @@ namespace sysinfo;
 
 internal class GetDatafromApi
 {
-    public async Task<DateInfo> FetchDataContentAsync()
+    public static async   Task<DateInfo> FetchDataContentAsync()
     {
-        const string url = "https://www.bahesab.ir/time/hamedan/";
+        const string url = "https://api.keybit.ir/time/";
+
         try
         {
-            var httpClient = new HttpClient();
-            var html = await httpClient.GetStringAsync(url);
-            var doc = new HtmlDocument();
-            doc.LoadHtml(html);
-            var node = doc.DocumentNode.SelectSingleNode("//span[@id='date']");
-            if (node == null)
-                throw new Exception("Failed to get date.");
-            var todayNum = node.SelectSingleNode(".//span").InnerText;
-            if (todayNum == null) throw new Exception("Failed to get today.");
-            var month = node.InnerHtml.Split("</span>")[1].Split("<br>")[0];
-
-            Debug.WriteLine(month);
-            if (month == null) throw new Exception("Failed to get month.");
-            var todayText = node.InnerHtml.Split("<span>")[0].Split(" ")[1];
-            var morningHolyTime = doc.DocumentNode.SelectSingleNode("//div[@class='timer']").ChildNodes[0].InnerText
-                .Split("--")[0];
-            var noonHolyTime = doc.DocumentNode.SelectSingleNode("//span[@id='azan-time3']").InnerText;
-            var afternoonHolyTime = doc.DocumentNode.SelectSingleNode("//span[@id='azan-time5']").InnerText;
-
-
-            Debug.WriteLine(month);
-            if (month == null) throw new Exception("Failed to get month.");
-
-
-            var dateInfo = new DateInfo
-            {
-                DateText = todayNum,
-                MonthText = month,
-                DayText = todayText,
-                morningHollyTime = new MorningHollyTime
-                {
-                    Hour = int.Parse(Tools.ConvertPersianToEnglish(morningHolyTime.Split(":")[0])),
-                    Minute = int.Parse(Tools.ConvertPersianToEnglish(morningHolyTime.Split(":")[1]))
-                },
-                eveningHollyTime = new EveningHollyTime
-                {
-                    Hour = int.Parse(Tools.ConvertPersianToEnglish(noonHolyTime.Split(":")[0])),
-                    Minute = int.Parse(Tools.ConvertPersianToEnglish(noonHolyTime.Split(":")[1]))
-                },
-                afternoonHollyTime = new AfternoonHollyTime
-                {
-                    Hour = int.Parse(Tools.ConvertPersianToEnglish(afternoonHolyTime.Split(":")[0])),
-                    Minute = int.Parse(Tools.ConvertPersianToEnglish(afternoonHolyTime.Split(":")[1]))
-                }
-            };
-            return dateInfo;
-        }
-
-        catch
-        {
-            return new DateInfo
+            HttpClient httpClient = new HttpClient();
+            HttpResponseMessage timeApiResponseStatus = await httpClient.GetAsync(url);
+            if (!timeApiResponseStatus.IsSuccessStatusCode)
+                return new DateInfo
                 {
                     DateText = "00",
                     MonthText = "00",
                     DayText = "00",
-                    morningHollyTime = new MorningHollyTime
-                    {
-                        Hour = 0,
-                        Minute = 0
-                    },
-                    eveningHollyTime = new EveningHollyTime
-                    {
-                        Hour = 0,
-                        Minute = 0
-                    },
-                    afternoonHollyTime = new AfternoonHollyTime
-                    {
-                        Hour = 0,
-                        Minute = 0
-                    }
-                }
-                ;
+                   
+                };
+            string timeApiResponse = await timeApiResponseStatus.Content.ReadAsStringAsync();
+            ShamsiDate? shamsiDate = JsonConvert.DeserializeObject<ShamsiDate>(timeApiResponse);
+
+            // Assuming you have logic to extract the required fields from shamsiDate
+            // Replace the following placeholders with actual logic
+            const string todayNum = "00"; // Extract from shamsiDate
+            const string month = "00"; // Extract from shamsiDate
+            const string todayText = "00"; // Extract from shamsiDate
+           
+
+            DateInfo? dateInfo = new DateInfo
+            {
+                
+                DateText = shamsiDate?.Date.Day.Number.En ?? throw new InvalidOperationException(),
+                MonthText = shamsiDate?.Date.Month.Name ?? throw new InvalidOperationException(),
+                DayText = shamsiDate?.Date.Weekday.Name ?? throw new InvalidOperationException(),
+             
+            };
+            return dateInfo;
+        }
+        catch (Exception ex)
+        {
+            return new DateInfo
+            {
+                DateText = "00",
+                MonthText = "00",
+                DayText = "00",
+              
+            };
         }
     }
+    public static async Task<HollyTimes> GetHollyTimesAsync()
+    {
+        const string city = "همدان";
+        const string url = $"https://api.keybit.ir/owghat/?city={city}";
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage hollyTimesResponseMessage = await httpClient.GetAsync(url);
 
+        var hollyTimesResponse = await hollyTimesResponseMessage.Content.ReadAsStringAsync();
+        HollyTimeResult? hollyTimesResponseMessageObject = JsonConvert.DeserializeObject<HollyTimeResult>(hollyTimesResponse);
+
+        return new HollyTimes
+        {
+            MorningHollyTime = new MorningHollyTime
+            {
+
+                Hour = int.Parse(hollyTimesResponseMessageObject?.Result.AzanSobh.Split(":")[0] ?? throw new InvalidOperationException()),
+                Minute = int.Parse(hollyTimesResponseMessageObject?.Result.AzanSobh.Split(":")[1] ?? throw new InvalidOperationException())
+            },
+            EveningHollyTime = new EveningHollyTime
+            {
+                Hour = int.Parse(hollyTimesResponseMessageObject?.Result.AzanZohr.Split(":")[0] ?? throw new InvalidOperationException()),
+                Minute = int.Parse(hollyTimesResponseMessageObject?.Result.AzanZohr.Split(":")[1] ?? throw new InvalidOperationException())
+            },
+            AfternoonHollyTime = new AfternoonHollyTime
+            {
+                Hour = int.Parse(hollyTimesResponseMessageObject?.Result.AzanMaghreb.Split(":")[0] ?? throw new InvalidOperationException()),
+                Minute = int.Parse(hollyTimesResponseMessageObject?.Result.AzanMaghreb.Split(":")[1] ?? throw new InvalidOperationException())
+            }
+
+        };
+
+
+
+
+
+        
+
+
+    } 
 
     public static async Task<OpenWeatherResponse> GetWeatherDataAsync(string cityName)
     {
@@ -108,8 +116,8 @@ internal class GetDatafromApi
             var response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
-                var json = await response.Content.ReadAsStringAsync();
-                var deserializedWeather = JsonConvert.DeserializeObject<OpenWeatherResponse>(json);
+                dynamic? json = await response.Content.ReadAsStringAsync();
+                OpenWeatherResponse? deserializedWeather = JsonConvert.DeserializeObject<OpenWeatherResponse>(json);
 
                 weatherResponse = deserializedWeather ?? throw new Exception("Failed to get weather.");
             }
@@ -125,31 +133,38 @@ internal class GetDatafromApi
             };
         }
 
-        const string uVApiKey = "S8VLXMD9R3FE7FRCHFQN396RU"; // Replace with your API key
-        var uVUrl =
+
+
+        return weatherResponse;
+    }
+    public static async Task<int> GetUvIndex(string cityName)
+    {
+        const string uVApiKey = "S8VLXMD9R3FE7FRCHFQN396RU";
+        dynamic? uVUrl =
             $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{cityName}?unitGroup=us&key={uVApiKey}&contentType=json";
 
         using var uVClient = new HttpClient();
         try
         {
-            var response = await client.GetAsync(uVUrl);
+            var response = await uVClient.GetAsync(uVUrl);
             if (response.IsSuccessStatusCode)
             {
-                var json = await response.Content.ReadAsStringAsync();
+                string json = await response.Content.ReadAsStringAsync();
                 dynamic? uVObject = JsonConvert.DeserializeObject<ExpandoObject>(json, new ExpandoObjectConverter());
-                var uVIndexNode = uVObject?.days?[0]?.uvindex;
+                dynamic? uVIndexNode = uVObject?.days?[0]?.uvindex;
+            
+                dynamic? description = uVObject?.description;
+                
 
-                if (uVIndexNode != null)
-                {
-                    //
-                }
+                return uVIndexNode != null ? (int)uVIndexNode : 0;
             }
+
+
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error fetching UV index: {ex.Message}");
+            return 0;
         }
-
-        return weatherResponse;
+        return 0;
     }
 }
