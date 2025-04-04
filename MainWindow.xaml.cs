@@ -13,6 +13,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Imaging;
+
 using WinRT;
 using WinRT.Interop;
 using Color = Windows.UI.Color;
@@ -23,16 +24,16 @@ namespace sysinfo;
 
 public sealed partial class MainWindow : Window
 {
-    
-    
-    
+
+
+
     private readonly DispatcherTimer _dispatcherTimer = new();
     private Point _clickOffset;
     private bool _isDragging;
     private DispatcherQueue _dispatcherQueue;
 
     /* ------------------------------- MainWindow Constructor ------------------------------- */
-    public  MainWindow()
+    public MainWindow()
     {
         InitializeComponent();
 
@@ -45,10 +46,12 @@ public sealed partial class MainWindow : Window
         PopulateWeatherInfo();
         PopulateDateInfo();
         StartBlinking("Blinking");
+        FillIedaTb();
+        
         _dispatcherQueue = DispatcherQueue.GetForCurrentThread();
         GetDatafromApi.GetHollyTimesAsync();
         var amPm = DateTime.Now.Hour < 12 ? SunPosition.AM : SunPosition.PM;
-       
+
         //var dateRespone = Task.Run(async () => await GetDatafromApi.FetchDataContentAsync()).Result;
         ////TodayChDateTb.Text = ChrisitianDate.ChDay.ToString();
         ////MonthChDateTb.Text = ChrisitianDate.ChMonth.ToString();
@@ -57,25 +60,23 @@ public sealed partial class MainWindow : Window
         //DayOfWeekTb.Text = dateRespone.DayText;
         //MonthTb.Text = dateRespone.MonthText;
         OpenWeatherResponse weatherResponse = Task.Run(async () => await GetDatafromApi.GetWeatherDataAsync("Hamedan")).Result;
-       // if (weatherResponse.Main.Temp != null) WeatherTb.Text = weatherResponse.Main.Temp?.ToString("0.0") + "°C";
+        // if (weatherResponse.Main.Temp != null) WeatherTb.Text = weatherResponse.Main.Temp?.ToString("0.0") + "°C";
         WeatherStates.WeatherStatesFill();
-       
+
 
         var response = Task.Run(async () => await GetDatafromApi.FetchDataContentAsync()).Result;
-        DayNumTb.Text = Tools.ConvertPersianToEnglish( response.DateText);
+        DayNumTb.Text = Tools.ConvertPersianToEnglish(response.DateText);
         DayOfWeekTb.Text = response.DayText;
         MonthTb.Text = response.MonthText;
 
 
 
-        
 
 
 
 
 
-
-           WeatherSample fillterdWeatherSamples= WeatherStates.GetWeatherSample(weatherResponse.Weather[0].Description,amPm);
+        WeatherSample fillterdWeatherSamples = WeatherStates.GetWeatherSample(weatherResponse.Weather[0].Description, amPm);
         WeatherIcon.Source = new BitmapImage(new Uri(fillterdWeatherSamples.Image));
         int uvinedx = Task.Run(async () => await GetDatafromApi.GetUvIndex("Hamadan")).Result;
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
@@ -89,7 +90,7 @@ public sealed partial class MainWindow : Window
         _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
         _dispatcherTimer.Tick += MoveWindowWhileDragging;
 
-      
+
     }
 
 
@@ -116,7 +117,7 @@ public sealed partial class MainWindow : Window
     public void HandleGridPointerPressed(object sender, PointerRoutedEventArgs e)
     {
         _isDragging = true;
-       
+
         var positionInElement = e.GetCurrentPoint((UIElement)sender).Position;
         _clickOffset = new Point((int)positionInElement.X, (int)positionInElement.Y);
         _dispatcherTimer.Start();
@@ -133,14 +134,8 @@ public sealed partial class MainWindow : Window
     public void HandleGridPointerRelased(object sender, PointerRoutedEventArgs e)
     {
         _isDragging = false;
-        
+
         _dispatcherTimer.Stop();
     }
 
-    private void IdeaTextBox_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        
-     
-        Debug.WriteLine(text);
-    }
-}
+  }

@@ -4,7 +4,6 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
-using Windows.UI.Core;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -79,14 +78,19 @@ public sealed partial class MainWindow : Window
     {
         _stopwatch.Restart();
     }
-    private  void IdeaTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+    private void IdeaTextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
-        Debug.WriteLine(e.Key.ToString());
-        if (e.Key == Windows.System.VirtualKey.Enter)
+        string text = IdeaTextBox.Text;
+
+
+        char lastChar = text[text.Length - 1];
+
+        if (lastChar == '\r')
         {
-            Debug.WriteLine("Enter key pressed");
-            // Add your logic here for when the Enter key is pressed
+            Tools.SaveTextToFile(text);
         }
-     
+
+
+        //Debug.WriteLine(text);
     }
 }
