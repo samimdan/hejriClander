@@ -9,6 +9,7 @@ using Microsoft.UI.Composition;
 using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Imaging;
@@ -23,7 +24,8 @@ namespace sysinfo;
 public sealed partial class MainWindow : Window
 {
     
-    private readonly DispatcherTimer _dateTime;
+    
+    
     private readonly DispatcherTimer _dispatcherTimer = new();
     private Point _clickOffset;
     private bool _isDragging;
@@ -39,8 +41,10 @@ public sealed partial class MainWindow : Window
             //MainWindow_Activated(e, s);
             ApplyAcrylicEffect();
         };
+        TimerStart();
         PopulateWeatherInfo();
         PopulateDateInfo();
+        StartBlinking("Blinking");
         _dispatcherQueue = DispatcherQueue.GetForCurrentThread();
         GetDatafromApi.GetHollyTimesAsync();
         var amPm = DateTime.Now.Hour < 12 ? SunPosition.AM : SunPosition.PM;
@@ -85,23 +89,7 @@ public sealed partial class MainWindow : Window
         _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
         _dispatcherTimer.Tick += MoveWindowWhileDragging;
 
-        _dateTime = new DispatcherTimer
-        {
-            Interval = TimeSpan.FromSeconds(1)
-        };
-        _dateTime.Tick += (sender, e) =>
-        {
-            var hour = DateTime.Now.Hour % 12;
-            if (hour == 0) hour = 12;
-
-            HourTb.Text = hour.ToString();
-            MinuteTb.Text = DateTime.Now.Minute.ToString();
-            SecondTb.Text = DateTime.Now.ToString("ss");
-            //TdIcon.Glyph = DateTime.Now.Hour <= 12 ? "\uE706" : "\uE708";
-          //  TdIcon.Foreground = DateTime.Now.Hour <= 12 ? sunBrush : moonBrush;
-            SecondAnimation.Begin();
-        };
-        _dateTime.Start();
+      
     }
 
 
@@ -149,5 +137,10 @@ public sealed partial class MainWindow : Window
         _dispatcherTimer.Stop();
     }
 
- 
+    private void IdeaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        
+     
+        Debug.WriteLine(text);
+    }
 }

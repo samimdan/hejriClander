@@ -706,6 +706,9 @@
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Roboto.ttf">
       <PackagePath>Assets\Fonts\Roboto.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Weather.ttf">
+      <PackagePath>Assets\Fonts\Weather.ttf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\aaa-2x.gif">
       <PackagePath>Assets\gift\aaa-2x.gif</PackagePath>
     </AppxPackagedFile>
@@ -783,6 +786,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\110802_sun_fog_icon.svg">
+      <PackagePath>Assets\Svg\110802_sun_fog_icon.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\110805_sun_icon.svg">
+      <PackagePath>Assets\Svg\110805_sun_icon.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\Morning.svg">
+      <PackagePath>Assets\Svg\Morning.svg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\weather\moon.png">
       <PackagePath>Assets\weather\moon.png</PackagePath>

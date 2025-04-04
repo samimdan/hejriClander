@@ -4,9 +4,11 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using Windows.UI.Core;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
 
 #endregion
 
@@ -76,5 +78,15 @@ public sealed partial class MainWindow : Window
     private void ResetTimer_Click(object sender, RoutedEventArgs e)
     {
         _stopwatch.Restart();
+    }
+    private  void IdeaTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+    {
+        Debug.WriteLine(e.Key.ToString());
+        if (e.Key == Windows.System.VirtualKey.Enter)
+        {
+            Debug.WriteLine("Enter key pressed");
+            // Add your logic here for when the Enter key is pressed
+        }
+     
     }
 }

@@ -12,11 +12,11 @@ namespace sysinfo
         public void PopulateDateInfo()
         {
             HollyTimes hTimeResult=Task.Run(async ()=> await GetDatafromApi.GetHollyTimesAsync()).Result;
-            MorningHolyHourTb.Text = hTimeResult.MorningHollyTime.Hour.ToString();
+            MorningHolyHourTb.Text = "0" + hTimeResult.MorningHollyTime.Hour.ToString();
             MorningHolyMinTb.Text = hTimeResult.MorningHollyTime.Minute.ToString();
             EveningHolyHourTb.Text = Tools.Convert24To12(hTimeResult.EveningHollyTime.Hour).ToString();
             EveningHolyMinTb.Text = hTimeResult.EveningHollyTime.Minute.ToString();
-            AfterNoonHolyHourTb.Text = Tools.Convert24To12(hTimeResult.AfternoonHollyTime.Hour).ToString();
+            AfterNoonHolyHourTb.Text = "0"+Tools.Convert24To12(hTimeResult.AfternoonHollyTime.Hour).ToString();
             AfterNoonHolyMinTb.Text = hTimeResult.AfternoonHollyTime.Minute.ToString();
         }
     }

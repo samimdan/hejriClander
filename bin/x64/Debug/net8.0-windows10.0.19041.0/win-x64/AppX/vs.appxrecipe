@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-03T16:42:25.970</Modified>
+      <Modified>2025-04-04T14:37:09.607</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-04-03T16:27:56.096</Modified>
+      <Modified>2025-04-04T14:23:19.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.runtimeconfig.json">
       <PackagePath>sysinfo.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\sysinfo.dll">
       <PackagePath>sysinfo.dll</PackagePath>
-      <Modified>2025-04-03T16:42:25.552</Modified>
+      <Modified>2025-04-04T14:37:09.269</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>sysinfo.exe</PackagePath>
-      <Modified>2025-04-03T16:42:25.559</Modified>
+      <Modified>2025-04-04T14:37:09.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x86\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x86\native\WebView2Loader.dll</PackagePath>
@@ -941,6 +941,10 @@
       <PackagePath>Assets\Fonts\Roboto.ttf</PackagePath>
       <Modified>2025-03-24T13:28:36.144</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Fonts\Weather.ttf">
+      <PackagePath>Assets\Fonts\Weather.ttf</PackagePath>
+      <Modified>2025-04-04T11:20:54.128</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\gift\aaa-2x.gif">
       <PackagePath>Assets\gift\aaa-2x.gif</PackagePath>
       <Modified>2025-03-23T19:47:35.369</Modified>
@@ -1044,6 +1048,18 @@
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2025-03-22T17:41:54.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\110802_sun_fog_icon.svg">
+      <PackagePath>Assets\Svg\110802_sun_fog_icon.svg</PackagePath>
+      <Modified>2025-03-30T13:35:17.919</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\110805_sun_icon.svg">
+      <PackagePath>Assets\Svg\110805_sun_icon.svg</PackagePath>
+      <Modified>2025-03-30T13:35:26.642</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\Morning.svg">
+      <PackagePath>Assets\Svg\Morning.svg</PackagePath>
+      <Modified>2025-04-03T20:29:01.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\weather\moon.png">
       <PackagePath>Assets\weather\moon.png</PackagePath>

@@ -7,33 +7,35 @@ using Microsoft.UI.Xaml;
 
 namespace sysinfo
 {
-    internal class Timer
+    public sealed partial class MainWindow: Window
     {
-        private  DispatcherTimer _dispatcherTime;
-        private readonly Date _workTimer;
-        public Timer()
-        {
-            _dispatcherTime = new DispatcherTimer();
-            _dispatcherTime.Tick += _dispatcherTime_Tick;
-            _dispatcherTime.Interval=new TimeSpan(0, 0, 1);
 
-        }
-
-        private void _dispatcherTime_Tick(object? sender, object e)
+        public static DispatcherTimer Timer { get; } = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
+       
+        private void TimerStart()
         {
-            throw new NotImplementedException();
-        }
+            Timer.Tick += (sender, e) =>
+            {
+                Time.Hour = DateTime.Now.Hour;
+                Time.Minute = DateTime.Now.Minute;
+                Time.Second = DateTime.Now.Second;
+                int hour = DateTime.Now.Hour % 12;
+                if (hour == 0) hour = 12;
 
-        public void Start()
-        {
+                HourTb.Text = hour.ToString();
+                MinuteTb.Text = DateTime.Now.Minute.ToString();
+                SecondTb.Text = DateTime.Now.ToString("ss");
 
-        }
-        public void Stop()
-        {
-        }
-        public void Reset()
-        {
-
+                SecondAnimation.Begin();
+            };
+            Timer.Start();
         }
     }
+    internal class Time()
+    {
+        public static int Hour { get; set; }
+        public static int Minute { get; set; }
+        public static int Second { get; set; }
+    }
+
 }

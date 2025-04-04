@@ -5,6 +5,7 @@ Assets\Fonts\BigShouldersStencil.ttf
 Assets\Fonts\IRANSansX-Regular.ttf
 Assets\Fonts\Roboto.ttf
 Assets\Fonts\Roboto-Italic-VariableFont_wdth,wght.ttf
+Assets\Fonts\Weather.ttf
 Assets\gift\_d-2x.gif
 Assets\gift\aaa-2x.gif
 Assets\gift\BOOBA-2x.gif
@@ -31,6 +32,9 @@ Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
+Assets\Svg\110802_sun_fog_icon.svg
+Assets\Svg\110805_sun_icon.svg
+Assets\Svg\Morning.svg
 Assets\weather\moon.png
 Assets\weather\moon_blizzard.png
 Assets\weather\moon_clouds.png

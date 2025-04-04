@@ -17,6 +17,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions >
         <Grid Grid.Row="0" Background="Transparent">
             <Grid.ColumnDefinitions>
@@ -120,35 +121,50 @@
           
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                <TextBlock x:Name="MorningHolyHourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-                <TextBlock Tag="Colon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="red"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-                <TextBlock x:Name="MorningHolyMinTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-              
-                
-                
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"  >
+                <TextBlock x:Name="MorningHolyHourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock Tag="Blinking" Text=":" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"   FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" Opacity="1" />
+                <TextBlock x:Name="MorningHolyMinTb"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"   FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock x:Name="MorningIcon" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontFamily="/Assets/Fonts/Weather.ttf#icomoon" Foreground="#00a6f4" Text="&#xe94b;" Margin="110,0,0,0" />
+
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
 
-               <TextBlock x:Name="EveningHolyHourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-               <TextBlock Tag="Colon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-                <TextBlock x:Name="EveningHolyMinTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-                
-                
+               <TextBlock x:Name="EveningHolyHourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" Margin="0,10,0,10"/>
+               <TextBlock Tag="Blinking" Text=":" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock x:Name="EveningHolyMinTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock x:Name="EveningIcon" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="30" FontFamily="/Assets/Fonts/Weather.ttf#icomoon" Foreground="#ffdf20" Text="&#xe925;" Margin="110,0,0,0" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
 
-                <TextBlock x:Name="AfterNoonHolyHourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-                <TextBlock Tag="Colon" Text=":" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
-                <TextBlock x:Name="AfterNoonHolyMinTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock x:Name="AfterNoonHolyHourTb"  VerticalAlignment="Center" HorizontalAlignment="Center"   FontSize="25" FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock Tag="Blinking" Text=":" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock x:Name="AfterNoonHolyMinTb"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25"  FontStyle="Normal" FontWeight="400" FontFamily="/Assets/Fonts/Roboto.ttf#Roboto" />
+                <TextBlock x:Name="AfterNoonIcon" Foreground="#ff6900"  FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Assets/Fonts/Weather.ttf#icomoon" Text="&#xe930;" Margin="110,0,0,0" />
+
+                
+
             </StackPanel>
             
         </StackPanel>
 
+        <StackPanel Grid.Row="3" Padding="20">
+            <TextBlock Text="Enter your Idea:" Margin="0,0,0,10"/>
+
+            <TextBox 
+             
+                TextWrapping="Wrap"
+                Height="150"
+                PlaceholderText="Write here..."
+                ScrollViewer.VerticalScrollBarVisibility="Visible"
+                x:Name="IdeaTextBox"
+                TextChanged="IdeaTextBox_TextChanged"
+                AcceptsReturn="True"
+                />
+        </StackPanel>
 
 
-
-        <StackPanel Grid.Row="3" Orientation="Vertical"   VerticalAlignment="Center" HorizontalAlignment="Center" >
+        <StackPanel Grid.Row="4" Orientation="Vertical"   VerticalAlignment="Center" HorizontalAlignment="Center" >
             <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center" >
 
                 <ToggleSwitch x:Name="TimerSwitch"  OffContent="Do work" OnContent="Working" IsOn="False"  Toggled="TimerToggled"/>
