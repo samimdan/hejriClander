@@ -53,9 +53,7 @@ public sealed partial class MainWindow : Window
         var amPm = DateTime.Now.Hour < 12 ? SunPosition.AM : SunPosition.PM;
 
         //var dateRespone = Task.Run(async () => await GetDatafromApi.FetchDataContentAsync()).Result;
-        ////TodayChDateTb.Text = ChrisitianDate.ChDay.ToString();
-        ////MonthChDateTb.Text = ChrisitianDate.ChMonth.ToString();
-        ////MonthChDateTextTb.Text = ChrisitianDate.ChMonthName;
+      
         //DayNumTb.Text = Tools.ConvertPersianToEnglish(dateRespone.DateText);
         //DayOfWeekTb.Text = dateRespone.DayText;
         //MonthTb.Text = dateRespone.MonthText;
@@ -78,7 +76,7 @@ public sealed partial class MainWindow : Window
 
         WeatherSample fillterdWeatherSamples = WeatherStates.GetWeatherSample(weatherResponse.Weather[0].Description, amPm);
         WeatherIcon.Source = new BitmapImage(new Uri(fillterdWeatherSamples.Image));
-        int uvinedx = Task.Run(async () => await GetDatafromApi.GetUvIndex("Hamadan")).Result;
+        
         Brush sunBrush = new SolidColorBrush(Color.FromArgb(255, 254, 240, 138));
         Brush moonBrush = new SolidColorBrush(Color.FromArgb(255, 254, 208, 254));
         var hwnd = WindowNative.GetWindowHandle(this);

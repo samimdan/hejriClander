@@ -333,5 +333,5 @@ public class HollyTimeResult
     public bool Ok { get; set; }
 
     [JsonProperty("result")]
-    public Result Result { get; set; }
+    public  Result Result { get; set; }
 }

@@ -27,8 +27,20 @@ namespace sysinfo
                 SecondTb.Text = DateTime.Now.ToString("ss");
 
                 SecondAnimation.Begin();
+                checkAzan();
+                checkHour();
             };
             Timer.Start();
+        }
+
+        private void checkHour()
+        {
+           HollyTimes
+        }
+
+        private void checkAzan()
+        {
+            throw new NotImplementedException();
         }
     }
     internal class Time()

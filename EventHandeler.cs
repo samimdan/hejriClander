@@ -77,20 +77,8 @@ public sealed partial class MainWindow : Window
     private void ResetTimer_Click(object sender, RoutedEventArgs e)
     {
         _stopwatch.Restart();
+        WorkerTimerTb.Text = "00:00:00";
+        PlaySound(SoundType.Hour);
     }
-    private void IdeaTextBox_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        string text = IdeaTextBox.Text;
-
-
-        char lastChar = text[text.Length - 1];
-
-        if (lastChar == '\r')
-        {
-            Tools.SaveTextToFile(text);
-        }
-
-
-        //Debug.WriteLine(text);
-    }
+   
 }

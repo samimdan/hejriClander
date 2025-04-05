@@ -137,8 +137,9 @@ internal class GetDatafromApi
 
         return weatherResponse;
     }
-    public static async Task<int> GetUvIndex(string cityName)
+    public static async Task<WeatherExtraInfromation> GetWeatherExtraInfromation(string cityName)
     {
+        WeatherExtraInfromation weatherExtraInfromation=new WeatherExtraInfromation();
         const string uVApiKey = "S8VLXMD9R3FE7FRCHFQN396RU";
         dynamic? uVUrl =
             $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{cityName}?unitGroup=us&key={uVApiKey}&contentType=json";
@@ -156,15 +157,16 @@ internal class GetDatafromApi
                 dynamic? description = uVObject?.description;
                 
 
-                return uVIndexNode != null ? (int)uVIndexNode : 0;
+               weatherExtraInfromation =new WeatherExtraInfromation { UvIndex = uVIndexNode, WeatherInformation = description };
             }
+              return weatherExtraInfromation;
+    }
 
-
-        }
+        
         catch (Exception ex)
         {
-            return 0;
+            return new WeatherExtraInfromation { UvIndex=0,WeatherInformation="0"};
         }
-        return 0;
+        
     }
 }

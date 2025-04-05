@@ -202,7 +202,7 @@ namespace sysinfo
 
 public class WeatherExtraInfromation
 {
-  public int UvIndex;
+  public double UvIndex;
   public string? WeatherInformation;
 
 

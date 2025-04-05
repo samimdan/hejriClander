@@ -796,6 +796,12 @@
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Svg\Morning.svg">
       <PackagePath>Assets\Svg\Morning.svg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Waves\Azan.wav">
+      <PackagePath>Assets\Waves\Azan.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\Waves\Hour.mp3">
+      <PackagePath>Assets\Waves\Hour.mp3</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\source\repos\samimdan\hejriClander\Assets\weather\moon.png">
       <PackagePath>Assets\weather\moon.png</PackagePath>
     </AppxPackagedFile>
